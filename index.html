@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<title>Title TK</title>
+<style>
+    body {
+        width: 100%;
+        max-width: 960px;
+        margin: 0 auto;
+    }
+    .hidden {
+        display: none;
+    }
+    .stream {
+        position: relative;
+        padding-top: 56.25%;
+    }
+    #tlkio {
+        position: relative;
+        padding-top: 40%;
+    }
+    iframe {
+        border: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+    }
+</style>
+</head>
+<body>
+    <h1>Title TK</h1>
+    <section id="live" class="hidden">
+        <h2>Live</h2>
+        <div class="stream"><iframe src="https://customer-wt7rvxaldc4tck6q.cloudflarestream.com/6c53d6cf2471f5bee5415dd424a84c3d/iframe" allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;" allowfullscreen="true" preload="auto"></iframe></div>
+    </section>
+    <section id="chat" class="hidden">
+        <h2>Chat</h2>
+        <div id="tlkio" data-channel="lamusain" data-theme="theme--minimal" data-custom-css="http://john-hodgins.github.io/lamusain/chat-styles.css"></div><script async src="http://tlk.io/embed.js" type="text/javascript"></script>
+    </section>
+    <section id="upcoming">
+        <h2>Upcoming</h2>
+    </section>
+    <section id="past">
+        <h2>Past</h2>
+        <div class="stream"><iframe src="https://customer-wt7rvxaldc4tck6q.cloudflarestream.com/daf63fb11eb509f7d2a2787ef3ef1cc7/iframe?poster=https%3A%2F%2Fcustomer-wt7rvxaldc4tck6q.cloudflarestream.com%2Fdaf63fb11eb509f7d2a2787ef3ef1cc7%2Fthumbnails%2Fthumbnail.jpg%3Ftime%3D%26height%3D600" allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;" allowfullscreen="true"></iframe></div>
+    </section>
+    <section id="about">
+        <h2>About</h2>
+    </section>
+    <script src="https://embed.cloudflarestream.com/embed/sdk.latest.js"></script>
+    <script>
+        const player = Stream(document.querySelector('#live iframe'));
+        player.addEventListener('durationchange', () => {
+            document.getElementById('live').classList.remove = 'hidden';
+            document.getElementById('chat').classList.remove = 'hidden';
+        });
+    </script>
+</body>
+</html>
