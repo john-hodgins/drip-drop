@@ -63,13 +63,13 @@
             for (element in data) {
                 data[element].data.playback_ids.forEach(element => {
                     mux = document.createElement('mux-player');
-                    mux.setAttribute('playback-id', element.id);
                     if (id == 'live') {
                         mux.setAttribute('stream-type', 'live');
                         document.getElementById('chat').classList.remove('hidden');
                     } else {
                         mux.setAttribute('stream-type', 'on-demand');
                     }
+                    mux.setAttribute('playback-id', element.id);
                     document.getElementById(id).append(mux);
                     document.getElementById(id).classList.remove('hidden');
                     flag = true;
