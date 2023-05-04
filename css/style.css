@@ -1,27 +1,28 @@
-        body {
-            width: 100%;
-            max-width: 960px;
-            margin: 0 auto;
-        }
+body {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+}
 
-        .hidden {
-            display: none;
-        }
+.hidden {
+    display: none;
+}
 
-        #tlkio {
-            position: relative;
-            padding-top: 40%;
-        }
+#tlkio {
+    position: relative;
+    padding-top: 40%;
+}
 
-        #tlkio iframe {
-            border: none;
-            position: absolute;
-            top: 0;
-            left: 0;
-            height: 100%;
-            width: 100%;
-        }
+#tlkio iframe {
+    border: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
 
-        mux-player {
-            --pip-button: none;
-        }
+mux-player {
+    --pip-button: none;
+}
+
