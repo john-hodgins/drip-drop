@@ -1,60 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-  <!-- (c) 2023 | @shabana_asthma | last updated apr21-->
+	<!-- (c) 2023 | @shabana_asthma | last updated apr21-->
 
-  <head>
-    <title>dripdrop.tv</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+	<head>
+		<title>dripdrop.tv</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
-    <link rel="icon" type="image/png" href="favicon.png" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link rel="icon" type="image/png" href="favicon.png" />
 
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="" />
-    <meta property="og:title" content="dripdrop.tv" />
-    <meta property="og:description" content="inconsistent and juicy" />
-    <meta property="og:image" content="“”" />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="" />
+		<meta property="og:title" content="dripdrop.tv" />
+		<meta property="og:description" content="inconsistent and juicy" />
+		<meta property="og:image" content="“”" />
 
-    <meta property="twitter:url" content="" />
-    <meta property="twitter:title" content="dripdrop.tv" />
-    <meta property="twitter:description" content="inconsistent and juicy" />
-    <meta property="twitter:image" content="" />
+		<meta property="twitter:url" content="" />
+		<meta property="twitter:title" content="dripdrop.tv" />
+		<meta property="twitter:description" content="inconsistent and juicy" />
+		<meta property="twitter:image" content="" />
 
-    <script src="https://unpkg.com/@mux/mux-player"></script>
-    <script src="script.js"></script>
-  </head>
+		<script src="https://unpkg.com/@mux/mux-player"></script>
+		<script src="script.js"></script>
+	</head>
 
-  <body>
-    <h1>dripdrop.tv</h1>
-    <section id="live" class="hidden">
-      <h2>Live</h2>
-    </section>
+	<body>
+		<!-- 00 SECTION // OFFLINE HOMEPAGE -->
+		<section id="offline">
+			<span class="">
+				<button onclick="newPhrase()">dripdrop.tv</button>
+				<p id="phrases"></p>
+			</span>
+		</section>
 
+		<!-- 01 SECTION // LIVE STREAM -->
+		<section id="live" class="hidden">
+			<h2>Live</h2>
+		</section>
 
-    <!-- 02 SECTION // CHAT -->
-    <section id="chat" class="hidden">
-      <h2>Chat</h2>
-      <div
-        id="tlkio"
-        data-channel="lamusain"
-        data-theme="theme--minimal"
-        data-custom-css="https://john-hodgins.github.io/lamusain/chat-styles.css"
-      ></div>
-      
-      <script
-        async
-        src="https://tlk.io/embed.js"
-        type="text/javascript"
-      ></script>
-    </section>
+		<!-- 02 SECTION // CHAT -->
+		<section id="chat" class="hidden">
+			<h2>Chat</h2>
+			<div
+				id="tlkio"
+				data-channel="lamusain"
+				data-theme="theme--minimal"
+				data-custom-css="https://john-hodgins.github.io/lamusain/chat-styles.css"
+			></div>
 
+			<script
+				async
+				src="https://tlk.io/embed.js"
+				type="text/javascript"
+			></script>
+		</section>
 
-<!-- 03 SECTION // PAST STREAMS -->
-    <footer id="past" class="hidden">
-      <h2>Previously</h2>
-    </footer>
-
- 
-  </body>
+		<!-- 03 SECTION // PAST STREAMS -->
+		<footer id="past" class="hidden">
+			<h2>Previously</h2>
+			<a href="#" title="#">
+				<div id="streamDate"></div>
+				<div id="streamThumbnail"></div>
+				<div id="streamTitle"></div>
+				<div id="streamArtist"></div>
+				<div id="streamDuration"></div>
+			</a>
+		</footer>
+	</body>
 </html>
