@@ -1,5 +1,9 @@
+* {
+    --text-colour: #000;
+}
+
 body {
-    width: 100%;
+    width: 100vw;
     max-width: 960px;
     margin: 0 auto;
 }
@@ -26,3 +30,24 @@ mux-player {
     --pip-button: none;
 }
 
+#offline {
+width: inherit;
+height: ;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-colou);
+}
+footer {
+        height: 20vh;
+            min-height: 120px;
+}
+
+footer a {
+    display: flex;
+    flex-direction: row;
+    width: inherit;
+    justify-content: space-between;
+
+}
