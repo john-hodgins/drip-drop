@@ -42,16 +42,15 @@ fetch(url)
 // dripdrop.tv text toggle
 
 var dripdropPhrases = [
-	'is a place to stream',
-	'is inconsistent and juicy',
-	'loves you',
-	'likes you',
-	'is happy',
-	'is online',
-	'is you',
-	'is me',
-	'is bilingual',
-	'wowowow encore',
+	'a place to stream',
+	'inconsistent and juicy',
+	'tinydrain.tv',
+	'stream catcher',
+	'SOOSE southern ontario occasional streaming effort',
+	'weshallsee.tv',
+	'underthepillow.tv',
+	'never in your wildest streams',
+	'growing puddle',
 ];
 
 function newPhrase() {

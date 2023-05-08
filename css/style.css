@@ -31,46 +31,51 @@ mux-player {
 	--pip-button: none;
 }
 
-#offline {
-	width: inherit;
-}
-
 a {
 	text-decoration: none;
 	color: var(--text-colou);
 }
 
+div p {
+	margin: 0;
+}
+
+/* INFO BUTTON */
+
 .infobutton {
 	position: fixed;
 	top: 0px;
 	right: 0px;
-	padding-right: 1.25em;
-	padding-top: 0.25em;
+	padding: 0.65em;
+	border: 1px solid black;
+	background-color: yellow;
+	margin: 1em;
 }
 
 .right-align {
 	text-align: right;
-}
-div p {
-	margin: 0;
 }
 
 .hide {
 	display: none;
 }
 
-#buttonContent {
-	z-index: 1;
-	position: fixed;
-	top: 0px;
-	right: 0px;
-	padding-right: 1.25em;
-	padding-top: 0.25em;
-	/* text-align: right; */
-	width: 10vw;
-	border: 1px solid black;
+/* 00 SECTION --> OFFLINE DISPLAY PAGE */
+
+#offline {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
+span {
+	display: flex;
+	flex-direction: row;
+}
+span p {
+	margin: 0 0.25em;
+}
+/* 03 SECTION --> FOOTER FOR PAST STREAMS */
 footer {
 	height: 20vh;
 	min-height: 120px;
