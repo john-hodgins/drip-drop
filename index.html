@@ -3,7 +3,7 @@
 	<!-- (c) 2023 | @shabana_asthma | last updated apr21-->
 
 	<head>
-		<title>dripdrop.tv</title>
+		<title>drip-drop.tv</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -23,14 +23,21 @@
 
 		<!-- ENABLE AFTER FINISHED EDITING HOMEPAGE DESIGN -->
 		<!-- <script src="https://unpkg.com/@mux/mux-player"></script> -->
-		<script src="script.js"></script>
 	</head>
 
 	<body>
 		<!-- INFO BUTTON -->
-		<div class="dropdown">
-			<button class="dropbtn">?</button>
-			<div class="dropdown-content">
+		<div class="infobutton">
+			<p
+				class="right-align"
+				onMouseOver="displayContent()"
+				onMouseOut="displayContent()"
+				;
+			>
+				?
+			</p>
+
+			<div class="hide" id="dropdown">
 				<p>Thank you to Canada Council etc</p>
 				<p>Amy and Oliver</p>
 				<p>Jack and Rupali</p>
@@ -83,4 +90,5 @@
 			</a>
 		</footer>
 	</body>
+	<script src="script.js"></script>
 </html>

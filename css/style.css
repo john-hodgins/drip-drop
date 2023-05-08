@@ -40,20 +40,35 @@ a {
 	color: var(--text-colou);
 }
 
-.dropdown {
+.infobutton {
 	position: fixed;
 	top: 0px;
 	right: 0px;
-	padding-right: 0.25em;
+	padding-right: 1.25em;
 	padding-top: 0.25em;
 }
 
-.dropdown-content {
+.right-align {
+	text-align: right;
+}
+div p {
+	margin: 0;
+}
+
+.hide {
 	display: none;
-	position: absolute;
-	background-color: var(--text-secondary);
-	min-width: 3em;
+}
+
+#buttonContent {
 	z-index: 1;
+	position: fixed;
+	top: 0px;
+	right: 0px;
+	padding-right: 1.25em;
+	padding-top: 0.25em;
+	/* text-align: right; */
+	width: 10vw;
+	border: 1px solid black;
 }
 
 footer {

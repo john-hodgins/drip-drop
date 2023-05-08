@@ -62,3 +62,10 @@ function newPhrase() {
 
 // footer
 const pastVideo = ['date', 'img', 'title', 'artist', 'duration'];
+
+// dropdown button
+
+const dropdown = document.getElementById('dropdown');
+function displayContent() {
+	dropdown.classList.toggle('hide');
+}
