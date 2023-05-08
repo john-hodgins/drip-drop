@@ -64,17 +64,27 @@ div p {
 
 #offline {
 	display: flex;
-	justify-content: center;
+	flex-direction: column;
 	align-items: center;
+	height: 100vh;
+	justify-content: center;
+}
+
+img {
+	width: 100%;
 }
 
 span {
-	display: flex;
-	flex-direction: row;
+	text-align: center;
+	width: 100vw;
+	position: relative;
 }
+
 span p {
-	margin: 0 0.25em;
+	position: absolute;
+	width: 100vw;
 }
+
 /* 03 SECTION --> FOOTER FOR PAST STREAMS */
 footer {
 	height: 20vh;
