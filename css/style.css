@@ -123,7 +123,7 @@ span p {
 
 /* 03 SECTION --> FOOTER FOR PAST STREAMS */
 footer {
-	height: 20vh;
+	height: 13vh;
 	min-height: 120px;
 	position: fixed;
 	bottom: 0;
@@ -132,13 +132,13 @@ footer {
 	background: var(--text-color);
 }
 
-footer div {
-	height: 20px;
-}
-footer h2 {
+
+footer h3 {
 	text-align: center;
 	font-weight: 400;
 	text-decoration: underline;
+	margin: 0.5em;
+
 }
 
 footer a {
@@ -147,6 +147,17 @@ footer a {
 	width: 100vw;
 	justify-content: space-between;
 	background: black;
+	padding: 1em 0;
+}
+
+footer a+a {
+		border-top: 1px solid white;
+}
+
+.gradient {
+	  height:25px;
+  background-color: black;
+  background-image: linear-gradient(white, black);
 }
 
 mux-player {
