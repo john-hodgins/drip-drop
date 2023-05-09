@@ -129,7 +129,7 @@ footer {
 	bottom: 0;
 	left: 0;
 	color: var(--text-secondary);
-	background: var(--text-color);
+	background: #b8b8b8;
 }
 
 
@@ -146,7 +146,7 @@ footer a {
 	flex-direction: row;
 	width: 100vw;
 	justify-content: space-between;
-	background: black;
+	background: #b8b8b8;
 	padding: 1em 0;
 }
 
@@ -156,8 +156,8 @@ footer a+a {
 
 .gradient {
 	  height:25px;
-  background-color: black;
-  background-image: linear-gradient(white, black);
+  background-color: #b8b8b8;
+  background-image: linear-gradient(white, #b8b8b8);
 }
 
 mux-player {
