@@ -1,26 +1,117 @@
- body {
-     width: 100%;
-     max-width: 960px;
-     margin: 0 auto;
- }
+* {
+	--text-color: #000;
+	--text-secondary: #fff;
+}
 
- .hidden {
-     display: none;
- }
+body {
+	width: 100vw;
+	max-width: 960px;
+	margin: 0 auto;
+}
 
- #tlkio {
-     position: relative;
-     padding-top: 40%;
- }
+.hidden {
+	display: none;
+}
 
- #tlkio iframe {
-     border: none;
-     position: absolute;
-     top: 0;
-     left: 0;
-     height: 100%;
-     width: 100%;
- }
+#tlkio {
+	position: relative;
+	padding-top: 40%;
+}
+
+#tlkio iframe {
+	border: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+}
+
+mux-player {
+	--pip-button: none;
+}
+
+a {
+	text-decoration: none;
+	color: var(--text-colou);
+}
+
+div p {
+	margin: 0;
+}
+
+/* INFO BUTTON */
+
+.infobutton {
+	position: fixed;
+	top: 0px;
+	right: 0px;
+	padding: 0.65em;
+	border: 1px solid black;
+	background-color: yellow;
+	margin: 1em;
+}
+
+.right-align {
+	text-align: right;
+}
+
+.hide {
+	display: none;
+}
+
+/* 00 SECTION --> OFFLINE DISPLAY PAGE */
+
+#offline {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 100vh;
+	justify-content: center;
+}
+
+img {
+	width: 100%;
+}
+
+span {
+	text-align: center;
+	width: 100vw;
+	position: relative;
+}
+
+span p {
+	position: absolute;
+	width: 100vw;
+}
+
+/* 03 SECTION --> FOOTER FOR PAST STREAMS */
+footer {
+	height: 20vh;
+	min-height: 120px;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	color: var(--text-secondary);
+	background: var(--text-color);
+}
+
+footer div {
+	height: 20px;
+}
+footer h2 {
+	text-align: center;
+	font-weight: 400;
+	text-decoration: underline;
+}
+
+footer a {
+	display: flex;
+	flex-direction: row;
+	width: 100vw;
+	justify-content: space-between;
+	background: black;
+}
 
  mux-player {
      --pip-button: none;
