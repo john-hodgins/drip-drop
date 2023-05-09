@@ -1,99 +1,46 @@
-<!doctype html>
-<html lang=en>
+<!DOCTYPE html>
 
-<head>
-    <meta charset=utf-8>
-    <title>Title TK</title>
-    <style>
-        body {
-            width: 100%;
-            max-width: 960px;
-            margin: 0 auto;
-        }
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>drip-drop.tv</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" type="text/css" href="style.css" />
+		<link rel="icon" type="image/png" href="#" />
+	</head>
 
-        .hidden {
-            display: none;
-        }
+	<body>
+		<div class="inprogress">
+			<pre>
 
-        #tlkio {
-            position: relative;
-            padding-top: 40%;
-        }
+    drip-drop.tv    
 
-        #tlkio iframe {
-            border: none;
-            position: absolute;
-            top: 0;
-            left: 0;
-            height: 100%;
-            width: 100%;
-        }
+   </pre
+			>
+			<pre>
+                   _________
+                 /          \
+                |     is     |
+                 \           |
+                  \_________/</pre
+			>
 
-        mux-player {
-            --pip-button: none;
-        }
-    </style>
-</head>
+			<pre>
+       ___________
+      /           \
+     /    und      \
+    /       er      |
+   |________________|</pre
+			>
 
-<body>
-    <h1>Title TK</h1>
-    <section id="live" class="hidden">
-        <h2>Live</h2>
-    </section>
-    <section id="chat" class="hidden">
-        <h2>Chat</h2>
-        <div id="tlkio" data-channel="lamusain" data-theme="theme--minimal"
-            data-custom-css="https://john-hodgins.github.io/lamusain/chat-styles.css"></div>
-        <script async src="https://tlk.io/embed.js" type="text/javascript"></script>
-    </section>
-    <section id="upcoming">
-        <h2>Upcoming</h2>
-    </section>
-    <section id="past" class="hidden">
-        <h2>Past</h2>
-    </section>
-    <section id="about">
-        <h2>About</h2>
-    </section>
-    <script src="https://unpkg.com/@mux/mux-player"></script>
-    <script>
-        const url = 'https://lrw.ca/mux/irkvjb';
-        function addPlayer(data, id) {
-            flag = false;
-            for (element in data) {
-                data[element].data.playback_ids.forEach(element => {
-                    mux = document.createElement('mux-player');
-                    if (id == 'live') {
-                        mux.setAttribute('stream-type', 'live');
-                        document.getElementById('chat').classList.remove('hidden');
-                    } else {
-                        mux.setAttribute('stream-type', 'on-demand');
-                    }
-                    mux.setAttribute('playback-id', element.id);
-                    document.getElementById(id).append(mux);
-                    document.getElementById(id).classList.remove('hidden');
-                    flag = true;
-                });
-            }
-            return flag;
-        }
-        fetch(url).then((response) => response.json()).then((data) => {
-            if (data["video.live_stream.active"]) {
-                if (!addPlayer(data["video.live_stream.active"], 'live')) {
-                    if (data["video.asset.ready"]) {
-                        addPlayer(data["video.asset.ready"], 'past');
-                    }
-                    retry = setInterval(function () {
-                        fetch(url).then((response) => response.json()).then((data) => {
-                            if (addPlayer(data["video.live_stream.active"], 'live')) {
-                                clearTimeout(retry);
-                            }
-                        });
-                    }, 10000);
-                }
-            }
-        });
-    </script>
-</body>
-
+			<pre>
+______________
+|             \
+ \   con       \
+  \   struct    |
+   \       ion  |
+    \___________/</pre
+			>
+		</div>
+	</body>
 </html>
