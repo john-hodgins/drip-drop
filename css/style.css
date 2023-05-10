@@ -17,7 +17,7 @@
 	--grey-color: #b8b8b8;
 	--yellow-color: #ffee00;
 	--fade-in-effect: fadein 800ms;
-	font-size: calc(1em + 0.5vw);
+	font-size: calc(0.75em + 0.15vw);
 	font-family: var(--body-text);
 	color: var(--text-color);
 	-webkit-font-smoothing: antialiased;
@@ -158,6 +158,10 @@ span {
 span p {
 	position: absolute;
 	width: 100vw;
+}
+
+#phrases {
+	font-family: var(--body-text);
 }
 
 /* 03 SECTION --> FOOTER FOR PAST STREAMS */
