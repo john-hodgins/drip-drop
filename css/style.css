@@ -1,6 +1,7 @@
 * {
 	--text-color: #000;
 	--text-secondary: #fff;
+	--footer-color: #b8b8b8;
 }
 
 body {
@@ -108,12 +109,14 @@ div p {
 
 img {
 	width: 100%;
+	max-width: 700px;
 }
 
 span {
 	text-align: center;
 	width: 100vw;
 	position: relative;
+	padding-bottom: 1em;
 }
 
 span p {
@@ -129,7 +132,7 @@ footer {
 	bottom: 0;
 	left: 0;
 	color: var(--text-secondary);
-	background: #b8b8b8;
+	background:var(--footer-color);
 }
 
 
@@ -138,7 +141,6 @@ footer h3 {
 	font-weight: 400;
 	text-decoration: underline;
 	margin: 0.5em;
-
 }
 
 footer a {
@@ -146,7 +148,7 @@ footer a {
 	flex-direction: row;
 	width: 100vw;
 	justify-content: space-between;
-	background: #b8b8b8;
+	background: var(--footer-color);
 	padding: 1em 0;
 }
 
@@ -156,8 +158,8 @@ footer a+a {
 
 .gradient {
 	  height:25px;
-  background-color: #b8b8b8;
-  background-image: linear-gradient(white, #b8b8b8);
+  background-color: var(--footer-color);
+  background-image: linear-gradient(white, var(--footer-color));
 }
 
 mux-player {
