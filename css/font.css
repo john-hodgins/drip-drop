@@ -1,0 +1,52 @@
+@font-face {
+  font-family: "Sequel 100 Wide 75";
+  src: url("../fonts/OGJ Type Design - Sequel 100 Wide 75.otf");
+}
+
+@font-face {
+  font-family: "Sequel 100 Wide 45";
+  src: url("../fonts/OGJ Type Design - Sequel 100 Wide 45.otf");
+}
+
+@font-face {
+  font-family: "Sequel 100 Wide 46";
+  src: url("../fonts/OGJ Type Design - Sequel 100 Wide 46.otf");
+}
+
+@font-face {
+  font-family: "Mister Pixel Tools";
+  src: url("../fonts/Mister Pixel Tools.otf");
+}
+
+@font-face {
+  font-family: "Mister Pixels Font";
+  src: url("../fonts/Mister Pixel Regular.otf");
+}
+
+@font-face {
+  font-family: 'Authentic-Sans-90-reg';
+  src: url('../fonts/AUTHENTICSans-90.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Authentic-Sans-130-reg';
+  src: url('../fonts/AUTHENTICSans-130.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Authentic-Sans-90';
+  src: url('../fonts/AUTHENTICSans-Condensed-90.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Halibut Serif Regular';
+  src: url('../fonts/Halibut-Regular.woff2') format('woff2'), url('../fonts/Halibut-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
