@@ -2,6 +2,9 @@
 	"folders": [
 		{
 			"path": "."
+		},
+		{
+			"path": "../archives-of-resistance-01"
 		}
 	],
 	"settings": {}
