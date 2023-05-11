@@ -17,10 +17,12 @@
 	--serif-text: 'Cambo', serif;
 	--text-color: #000;
 	--text-secondary: #fff;
-	--grey-color: #b8b8b8;
-	--yellow-color: #fbff00;
+	--grey-color: #a7b5ae;
+	--yellow-color: coral;
+	--purple-color: #af95dc;
+	--peach-color: #ec8d8dab;
 	--green-color: #2bc552;
-	--brown-color: #4e2b18;
+	--darkgreen-color: #11440e;
 	--fade-in-effect: fadein 400ms;
 	font-size: calc(0.75em + 0.15vw);
 	font-family: var(--body-text);
@@ -51,7 +53,6 @@ html {
 
 body {
 	width: 100vw;
-	max-width: 960px;
 	margin: 0 auto;
 	touch-action: manipulation;
 	scroll-behavior: smooth;
@@ -60,6 +61,7 @@ body {
 #tlkio {
 	position: relative;
 	padding-top: 40%;
+	max-width: 960px;
 }
 
 #tlkio iframe {
@@ -69,16 +71,22 @@ body {
 	left: 0;
 	height: 100%;
 	width: 100%;
+	max-width: 960px;
 }
 
 mux-player {
 	--pip-button: none;
+	max-width: 960px;
 }
 
 mux-player {
 	--pip-button: none;
+	max-width: 960px;
 }
 
+section {
+	width: 100vw;
+}
 /* UNDER CONSTRUCTION PAGE */
 
 .inprogress {
@@ -175,27 +183,39 @@ span p {
 	font-family: var(--body-text);
 }
 
-/* 03 SECTION --> FOOTER FOR PAST STREAMS */
+/* 03 SECTION --> PAST VIDEOS */
+.video-credits {
+	text-align: center;
+	max-width: 960px;
+	margin: 0 auto;
+}
 
+.video-credits ul {
+	list-style: none;
+	padding: 0;
+}
+
+/* FOOTER // PAST STREAM LIST */
 footer {
 	position: fixed;
 	bottom: 0;
 	left: 0;
 	width: 100vw;
-	height: 13vh;
+	height: 14vh;
 	min-height: 120px;
 }
 
 .gradient {
 	background-image: linear-gradient(
 		0deg,
-		var(--brown-color),
+		var(--darkgreen-color),
 		var(--text-secondary)
 	);
-	width: inherit;
+	width: 100vw;
 	height: 2em;
 	left: 0;
-	position: relative;
+	bottom: 0;
+	position: sticky;
 }
 
 footer div + div {
@@ -205,8 +225,8 @@ footer div + div {
 	position: relative;
 	bottom: 0;
 	left: 0;
-	color: var(--text-secondary);
-	background: var(--brown-color);
+	color: var(--grey-color);
+	background: var(--darkgreen-color);
 	font-family: var(--narrow-text);
 	overflow-y: scroll;
 	/* background: linear-gradient(
@@ -219,9 +239,9 @@ footer div + div {
 footer h3 {
 	text-align: center;
 	font-weight: 400;
-	margin: 0 auto;
+	margin: 0.5em auto 0;
 	text-transform: uppercase;
-	/* border: 1px solid white; */
+	/* border: 1px solid var(--grey-color); */
 	text-decoration: underline;
 	border-radius: 100%;
 	width: 15%;
@@ -240,10 +260,10 @@ footer h3 + h3 {
 }
 
 footer a {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	background: var(--brown-color);
+	display: grid;
+	grid-template-columns: 1fr 3fr 4fr 0.25fr;
+	grid-gap: 3em;
+	background: var(--dark-color);
 	padding: 0.5em 0;
 	vertical-align: middle;
 	font-family: var(--narrow-text);
@@ -253,16 +273,16 @@ footer a {
 
 footer a:hover {
 	transition: var(--fade-in-effect);
-	color: var(--green-color);
+	color: var(--purple-color);
 }
 
 footer a:hover p img {
-	border: 1px solid var(--brown-color);
+	border: 1px solid var(--purple-color);
 	border-style: none none solid none;
 }
 
 footer a + a {
-	border-top: 1px solid white;
+	border-top: 1px dashed var(--grey-color);
 }
 
 footer div + div a:last-of-type {
@@ -282,6 +302,7 @@ footer a p:nth-child(2) {
 footer a p img {
 	width: 50px;
 	border-radius: 20em;
-	border: 1px inset white;
+	border: 1px solid white;
 	border-style: none none solid none;
+	margin-right: 1em;
 }
