@@ -60,12 +60,8 @@ body {
 }
 
 #tlkio {
-	/* position: relative; */
-
 	margin: 2em 0 4em 0;
 	width: 960px;
-
-	/* margin: 0 auto; */
 }
 
 #tlkio iframe {
@@ -78,8 +74,6 @@ body {
 mux-player {
 	--pip-button: none;
 	width: 960px;
-	/* max-width: 960px;
-	margin: 0 auto; */
 }
 
 section {
