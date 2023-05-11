@@ -18,9 +18,9 @@
 	--text-color: #000;
 	--text-secondary: #fff;
 	--grey-color: #a7b5ae;
-	--yellow-color: #ede929;
+	--yellow-color: #ddd100;
 	--purple-color: #af95dc;
-	--peach-color: #e44420;
+	--peach-color: #ff7658;
 	--green-color: #77e629;
 	--darkgreen-color: #11440e;
 	--brown-color: #794814;
@@ -60,17 +60,16 @@ body {
 }
 
 #tlkio {
-	position: relative;
-	/* padding-top: 40%; */
-	max-width: 960px;
-	margin: 0 auto;
+	/* position: relative; */
+
+	margin: 2em 0 4em 0;
+	width: 960px;
+
+	/* margin: 0 auto; */
 }
 
 #tlkio iframe {
 	border: none;
-	position: absolute;
-	top: 0;
-	left: 0;
 	height: 100%;
 	width: 100%;
 	max-width: 960px;
@@ -78,18 +77,16 @@ body {
 
 mux-player {
 	--pip-button: none;
-	max-width: 960px;
-	margin: 0 auto;
-}
-
-mux-player {
-	--pip-button: none;
-	max-width: 960px;
-	margin: 0 auto;
+	width: 960px;
+	/* max-width: 960px;
+	margin: 0 auto; */
 }
 
 section {
 	width: 100vw;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 section h2 {
@@ -106,6 +103,11 @@ section h2 {
 
 #chat h2 {
 	background-color: var(--green-color);
+}
+
+section#live {
+	/* position: relative;
+	left: 40vw; */
 }
 
 #live h2 {
