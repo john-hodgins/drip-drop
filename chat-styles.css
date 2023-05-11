@@ -1,3 +1,37 @@
+@import 'css/fonts.css';
+
+:root {
+	--body-text: 'Authentic-Sans-90-reg', 'Helvetica', sans-serif;
+	--narrow-text: 'Authentic-Sans-90', 'Helvetica', sans-serif;
+	--narrow-bold-text: 'Authentic-Sans-130', 'Helvetica', sans-serif;
+	--serif-text: 'Cambo', serif;
+	--text-color: #000;
+	--text-secondary: #fff;
+	--grey-color: #a7b5ae;
+	--yellow-color: #ede929;
+	--purple-color: #af95dc;
+	--peach-color: #e44420;
+	--green-color: #77e629;
+	--darkgreen-color: #11440e;
+	--brown-color: #794814;
+	--fade-in-effect: fadein 400ms;
+	font-size: calc(0.75em + 0.15vw);
+	font-family: var(--body-text);
+	color: var(--text-color);
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-animation: var(--fade-in-effect);
+	-moz-animation: var(--fade-in-effect);
+	-ms-animation: var(--fade-in-effect);
+	-o-animation: var(--fade-in-effect);
+	animation: var(--fade-in-effect);
+}
+
+::selection {
+	color: var(--text-color);
+	background: var(--yellow-color);
+}
+
 #header {
 	display: none;
 }
