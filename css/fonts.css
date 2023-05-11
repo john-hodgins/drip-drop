@@ -1,0 +1,41 @@
+@font-face {
+	font-family: 'Authentic-Sans-90-reg';
+	src: url('../fonts/AUTHENTICSans-90.woff2') format('woff2');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Authentic-Sans-90';
+	src: url('../fonts/AUTHENTICSans-Condensed-90.woff2') format('woff2');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Authentic-Sans-130';
+	src: url('../fonts/AUTHENTICSans-Condensed-130.woff2') format('woff2');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Cambo';
+	src: url('../fonts/Cambo-Regular.ttf') format('ttf');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Literata';
+	src: url('../fonts/Literata-VariableFont_opsz,wght.ttf') format('ttf');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Ovo';
+	src: url('../fonts/Ovo-Regular.ttf') format('ttf');
+	font-weight: normal;
+	font-style: normal;
+}
