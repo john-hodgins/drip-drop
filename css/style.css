@@ -21,7 +21,7 @@
 	--yellow-color: coral;
 	--purple-color: #af95dc;
 	--peach-color: #ec8d8dab;
-	--green-color: #2bc552;
+	--green-color: #77e629;
 	--darkgreen-color: #11440e;
 	--fade-in-effect: fadein 400ms;
 	font-size: calc(0.75em + 0.15vw);
@@ -62,6 +62,7 @@ body {
 	position: relative;
 	padding-top: 40%;
 	max-width: 960px;
+	margin: 0 auto;
 }
 
 #tlkio iframe {
@@ -77,16 +78,32 @@ body {
 mux-player {
 	--pip-button: none;
 	max-width: 960px;
+	margin: 0 auto;
 }
 
 mux-player {
 	--pip-button: none;
 	max-width: 960px;
+	margin: 0 auto;
 }
 
 section {
 	width: 100vw;
 }
+
+section h2 {
+	text-align: center;
+	font-weight: 400;
+	text-transform: uppercase;
+	border: 1px solid var(--text-color);
+	width: 10%;
+	min-width: 200px;
+	font-family: var(--narrow-text);
+	padding: 0.25em 0 0 0;
+	margin: 0 auto 0.5em;
+	background-color: var(--green-color);
+}
+
 /* UNDER CONSTRUCTION PAGE */
 
 .inprogress {
@@ -193,6 +210,69 @@ span p {
 .video-credits ul {
 	list-style: none;
 	padding: 0;
+}
+
+/* CHAT STYLING */
+#chat {
+	font-family: var(--body-text);
+}
+
+#chat.chat section#live dt.post-meta {
+	color: var(--text-color);
+	background-color: white;
+}
+
+#chat.chat section#live dt.post-meta span.post-name {
+	display: none;
+}
+
+#chat.chat section#live dt.post:before {
+	display: none;
+}
+
+div.post-avatar.post-avatar {
+	border: 1px solid var(--green-color);
+	box-shadow: none;
+	border-radius: 0px;
+}
+
+div.post-avatar.post-avatar--troll {
+	background-color: white;
+	color: var(--green-color);
+	text-transform: uppercase;
+}
+textarea#message_body.message-input {
+	border: 1px dashed var(--text-color);
+	border-radius: 0px;
+	background-color: white;
+	color: var(--text-color);
+	font-size: 16px;
+	line-height: 22px;
+}
+
+aside.aside div.info {
+	display: none;
+}
+aside.aside div.participants {
+	border-radius: 0px;
+	border: 1px solid var(--green-color);
+	height: inherit;
+	line-height: 22px;
+}
+
+aside.aside div.counter {
+	margin: 0;
+	color: var(--green-color);
+	border: none;
+	background-color: white;
+	text-align: left;
+	padding: 0.25em 0.5em;
+}
+
+aside.aside div.counter-button {
+	right: 2px;
+	border: none;
+	width: fit-content;
 }
 
 /* FOOTER // PAST STREAM LIST */
