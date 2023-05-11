@@ -7,6 +7,7 @@ function addPlayer(data, id) {
 			if (id == 'live') {
 				mux.setAttribute('stream-type', 'live');
 				document.getElementById('chat').classList.remove('hidden');
+				document.getElementById('offline').classList.add('hidden');
 			} else {
 				mux.setAttribute('stream-type', 'on-demand');
 			}
@@ -23,9 +24,9 @@ fetch(url)
 	.then((data) => {
 		if (data['video.live_stream.active']) {
 			if (!addPlayer(data['video.live_stream.active'], 'live')) {
-				if (data['video.asset.ready']) {
+				/* if (data['video.asset.ready']) {
 					addPlayer(data['video.asset.ready'], 'past');
-				}
+				} */
 				retry = setInterval(function () {
 					fetch(url)
 						.then((response) => response.json())
