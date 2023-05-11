@@ -1,4 +1,65 @@
 #header {
-    display: none;
+	display: none;
 }
 
+#chat {
+	font-family: var(--body-text);
+}
+
+#chat.chat section#live dt.post-meta {
+	color: var(--text-color);
+	background-color: white;
+}
+
+#chat.chat section#live dt.post-meta span.post-name {
+	display: none;
+}
+
+#chat.chat section#live dt.post:before {
+	display: none;
+}
+
+div.post-avatar.post-avatar {
+	border: 1px solid var(--green-color);
+	box-shadow: none;
+	border-radius: 0px;
+}
+
+div.post-avatar.post-avatar--troll {
+	background-color: white;
+	color: var(--green-color);
+	text-transform: uppercase;
+}
+textarea#message_body.message-input {
+	border: 1px dashed var(--text-color);
+	border-radius: 0px;
+	background-color: white;
+	color: var(--text-color);
+	font-size: 16px;
+	line-height: 22px;
+}
+
+aside.aside div.info {
+	display: none;
+}
+aside.aside div.participants {
+	border-radius: 0px;
+	border: 1px solid var(--green-color);
+	height: inherit;
+	line-height: 22px;
+}
+
+aside.aside div.counter {
+	margin: 0;
+	color: var(--green-color);
+	border: none;
+	background-color: white;
+	text-align: left;
+	padding: 0.25em 0.5em;
+}
+
+aside.aside div.counter-button {
+	right: 2px;
+	border: none;
+	width: fit-content;
+}

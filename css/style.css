@@ -18,11 +18,12 @@
 	--text-color: #000;
 	--text-secondary: #fff;
 	--grey-color: #a7b5ae;
-	--yellow-color: coral;
+	--yellow-color: #ede929;
 	--purple-color: #af95dc;
-	--peach-color: #ec8d8dab;
+	--peach-color: #e44420;
 	--green-color: #77e629;
 	--darkgreen-color: #11440e;
+	--brown-color: #794814;
 	--fade-in-effect: fadein 400ms;
 	font-size: calc(0.75em + 0.15vw);
 	font-family: var(--body-text);
@@ -101,7 +102,14 @@ section h2 {
 	font-family: var(--narrow-text);
 	padding: 0.25em 0 0 0;
 	margin: 0 auto 0.5em;
+}
+
+#chat h2 {
 	background-color: var(--green-color);
+}
+
+#live h2 {
+	background-color: var(--yellow-color);
 }
 
 /* UNDER CONSTRUCTION PAGE */
@@ -151,7 +159,7 @@ div p {
 	right: 0px;
 	padding: 0.65em;
 	border: 1px solid var(--text-color);
-	background-color: var(--yellow-color);
+	background-color: var(--peach-color);
 	margin: 1em;
 }
 
@@ -179,6 +187,10 @@ div p {
 	justify-content: center;
 }
 
+.logo {
+	width: 25%;
+	min-width: 300px;
+}
 img {
 	width: 100%;
 	max-width: 700px;
@@ -188,7 +200,7 @@ span {
 	text-align: center;
 	width: 100vw;
 	position: relative;
-	padding-bottom: 1em;
+	padding-bottom: 3em;
 }
 
 span p {
@@ -198,6 +210,7 @@ span p {
 
 #phrases {
 	font-family: var(--body-text);
+	margin-top: 0;
 }
 
 /* 03 SECTION --> PAST VIDEOS */
@@ -212,7 +225,7 @@ span p {
 	padding: 0;
 }
 
-/* CHAT STYLING */
+/* CHAT STYLING
 #chat {
 	font-family: var(--body-text);
 }
@@ -273,7 +286,7 @@ aside.aside div.counter-button {
 	right: 2px;
 	border: none;
 	width: fit-content;
-}
+} */
 
 /* FOOTER // PAST STREAM LIST */
 footer {
