@@ -54,6 +54,7 @@ html {
 
 body {
 	width: 100vw;
+	height: 100vh;	
 	margin: 0 auto;
 	touch-action: manipulation;
 	scroll-behavior: smooth;
@@ -92,7 +93,7 @@ section h2 {
 	min-width: 200px;
 	font-family: var(--narrow-text);
 	padding: 0.25em 0 0 0;
-	margin: 0 auto 0.5em;
+	margin: 1em auto 0.5em;
 }
 
 #chat h2 {
@@ -274,7 +275,7 @@ footer {
 	height: 2em;
 	left: 0;
 	bottom: 0;
-	position: sticky;
+	position: fixed;
 }
 
 footer div + div {
