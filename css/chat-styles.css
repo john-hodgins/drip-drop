@@ -93,7 +93,8 @@ body {
 }
 
 #chat.chat section#live dt.post-meta span.post-name {
-	display: none;
+	/* display: none; */
+	color: var(--grey-color);
 }
 
 #chat.chat section#live dt.post:before {
@@ -103,7 +104,7 @@ body {
 div.post-avatar.post-avatar {
 	border: 1px solid var(--green-color);
 	box-shadow: none;
-	border-radius: 0px;
+	border-radius: 12em;
 }
 
 div.post-avatar.post-avatar--troll {
@@ -137,6 +138,14 @@ aside.aside div.counter {
 	background-color: white;
 	text-align: left;
 	padding: 0.25em 0.5em;
+}
+
+button#share_button.counter-button.button {
+	border-left: none;
+}
+
+button#share_button.counter-button.button:hover {
+	background-color: var(--green-color);
 }
 
 aside.aside div.counter-button {
