@@ -54,7 +54,7 @@ html {
 
 body {
 	width: 100vw;
-	height: 100vh;	
+	height: 100vh;
 	margin: 0 auto;
 	touch-action: manipulation;
 	scroll-behavior: smooth;
@@ -163,6 +163,14 @@ div p {
 
 .infobutton:active {
 	cursor: grabbing;
+}
+#dropdown p:last-of-type {
+	margin: 1.5em 0 0.5em 0;
+}
+
+#dropdown img {
+	width: 50%;
+	margin: 0 0 0.5em 1em;
 }
 
 .right-align {
