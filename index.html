@@ -28,28 +28,51 @@
 </head>
 
 <body>
-	<!-- INFO BUTTON -->
-	<div class="infobutton">
-		<p class="right-align" onMouseOver="displayContent()" onMouseOut="displayContent()" ;>
-			?
-		</p>
+		<!-- INFO BUTTON -->
+		<div class="infobutton">
+			<p title="Info"
+				class="right-align"
+				onclick="displayContent()"
 
-		<div class="hide" id="dropdown">
-			<p>Thank you to Canada Council etc</p>
-			<p>Amy and Oliver</p>
-			<p>webstuff John and Rupali</p>
+				;
+			>
+				?
+			</p>
+
+			<div class="hide" id="dropdown">
+				<p>
+					Drip-drop.tv is a livestream platform, </br>organized by
+					<a href="https://amylam.me/" target="_blank"
+					title="amylam.me">Amy Lam</a> and
+					<a href="http://husain.de/" target="_blank" title="husain.de">Oliver Husain</a>
+				</p>
+				<p>
+					Designed by
+					<a href="https://rupalimo.github.io/" target="_blank" title="rupali.com"
+						>Rupali Morzaria</a
+					></br>Developed by <a href="" target="_blank" title="">John Hodgins</a>
+				</p>
+			
+				<p>Supported by Canada Council for the Arts</p>
+				<img src="assets/CCA.svg" width="50px" title="Canada Council for the Arts Logo">
+			</div>
 		</div>
 	</div>
 
 	<!-- 00 SECTION // OFFLINE HOMEPAGE -->
-	<section id="offline">
-		<span class="">
-			<img class="logo" src="assets/logo-09.png" width="200px" onclick="newPhrase()" />
-			<!-- <button onclick="newPhrase()">drip-drop.tv</button> -->
-			<p id="phrases"></p>
-		</span>
-		<img src="assets/water-ripple.gif" title="placeholder" alt="" />
-	</section>
+		<section id="offline" class="hide">
+			<span class="">
+				<img
+					class="logo"
+					src="assets/logo-15.png"
+					width="200px"
+					onclick="newPhrase()" title="click for more drip-drop.tv"
+				/>
+				<!-- <button onclick="newPhrase()">drip-drop.tv</button> -->
+				<p id="phrases"></p>
+			</span>
+			<img src="assets/water-ripple-03.gif" title="doodle person in water" alt="" />
+		</section>
 
 	<!-- 01 SECTION // LIVE STREAM -->
 	<section id="live" class="hidden">
@@ -57,10 +80,20 @@
 	</section>
 
 	<!-- 02 SECTION // CHAT -->
-	<section id="chat" class="hidden">
-		<h2>Chat</h2>
-		<div id="tlkio" data-channel="drip-drop" data-theme="theme--minimal"
-			data-custom-css="https://drip-drop.tv/chat-styles.css"></div>
+		<section id="chat">
+			<h2>Chat</h2>
+			<div
+				id="tlkio"
+				data-channel="lamusain"
+				data-theme="theme--minimal"
+				data-custom-css="https://github.com/rupalimo/dripdrop/blob/main/css/chat-styles.css"
+			></div>
+				<!-- <div
+				id="tlkio"
+				data-channel="lamusain"
+				data-theme="theme--minimal"
+				data-custom-css="https://john-hodgins.github.io/lamusain/chat-styles.css"
+			></div> -->
 
 		<script async src="https://tlk.io/embed.js" type="text/javascript"></script>
 	</section>
