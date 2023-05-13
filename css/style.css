@@ -388,6 +388,7 @@ footer a p img {
 	width: 50px;
 	height: max-content;
 	height: fit-content;
+	height: auto;
 	border-radius: 20em;
 	border: 1px solid white;
 	border-style: none none solid none;
@@ -412,5 +413,9 @@ footer a p img {
 
 	footer#past-list a p:nth-child(2) {
 		align-items: start;
+	}
+
+	footer a p img {
+		height: auto;
 	}
 }
