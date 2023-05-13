@@ -47,6 +47,7 @@
 	-moz-osx-font-smoothing: grayscale;
 	box-sizing: border-box;
 }
+
 html {
 	margin: 0;
 	padding: 0;
@@ -136,7 +137,7 @@ pre {
 /* GENERAL STYLING */
 
 .hidden {
-	display: none;
+	display: none !important;
 }
 
 a {
@@ -181,7 +182,7 @@ div p {
 	display: none;
 }
 
-.infobutton p + div > p {
+.infobutton p+div>p {
 	font-family: var(--serif-text);
 	font-size: 0.95em;
 	margin: 1em 0;
@@ -274,11 +275,9 @@ footer {
 }
 
 .gradient {
-	background-image: linear-gradient(
-		0deg,
-		var(--darkgreen-color),
-		var(--text-secondary)
-	);
+	background-image: linear-gradient(0deg,
+			var(--darkgreen-color),
+			var(--text-secondary));
 	width: 100vw;
 	height: 2em;
 	left: 0;
@@ -286,7 +285,7 @@ footer {
 	position: fixed;
 }
 
-footer div + div {
+footer div+div {
 	height: 100%;
 	min-height: 120px;
 	width: 100vw;
@@ -317,7 +316,7 @@ footer h3 {
 	font-family: var(--narrow-text);
 }
 
-footer h3 + h3 {
+footer h3+h3 {
 	position: absolute;
 	right: 0;
 	top: 0;
@@ -349,11 +348,11 @@ footer a:hover p img {
 	border-style: none none solid none;
 }
 
-footer a + a {
+footer a+a {
 	border-top: 1px dashed var(--grey-color);
 }
 
-footer div + div a:last-of-type {
+footer div+div a:last-of-type {
 	margin-bottom: 2em;
 }
 
