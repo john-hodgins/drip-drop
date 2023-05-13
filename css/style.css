@@ -63,13 +63,13 @@ body {
 
 #tlkio {
 	margin: 2em 0 4em 0;
-	width: 960px;
+	/* width: 960px; */
 }
 
 #tlkio iframe {
 	border: none;
-	height: 100%;
-	width: 100%;
+	/* height: 100%;
+	width: 100%; */
 	max-width: 960px;
 }
 
@@ -216,7 +216,7 @@ div p {
 
 .logo {
 	width: 18%;
-	min-width: 300px;
+	min-width: 250px;
 }
 .logo:hover {
 	cursor: grab;
@@ -240,6 +240,7 @@ span {
 	width: 100vw;
 	position: relative;
 	padding-bottom: 3em;
+	margin-top: 2em;
 }
 
 span p {
@@ -372,4 +373,11 @@ footer a p img {
 	border: 1px solid white;
 	border-style: none none solid none;
 	margin-right: 1em;
+}
+
+/* MOBILE */
+@media (max-width: 465px) {
+	#offline span + img {
+		width: 100%;
+	}
 }
