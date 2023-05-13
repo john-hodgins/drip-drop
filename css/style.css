@@ -62,8 +62,10 @@ body {
 }
 
 #tlkio {
-	margin: 2em 0 4em 0;
-	/* width: 960px; */
+	margin-bottom: 8em;
+	width: 960px;
+	height: 350px;
+	overflow-y: scroll;
 }
 
 #tlkio iframe {
@@ -182,7 +184,7 @@ div p {
 	display: none;
 }
 
-.infobutton p+div>p {
+.infobutton p + div > p {
 	font-family: var(--serif-text);
 	font-size: 0.95em;
 	margin: 1em 0;
@@ -240,7 +242,6 @@ span {
 	width: 100vw;
 	position: relative;
 	padding-bottom: 3em;
-	margin-top: 2em;
 }
 
 span p {
@@ -266,19 +267,12 @@ span p {
 }
 
 /* FOOTER // PAST STREAM LIST */
-footer {
-	position: fixed;
-	bottom: 0;
-	left: 0;
-	width: 100vw;
-	height: 14vh;
-	min-height: 120px;
-}
-
-.gradient {
-	background-image: linear-gradient(0deg,
-			var(--darkgreen-color),
-			var(--text-secondary));
+section + div.gradient {
+	background-image: linear-gradient(
+		0deg,
+		var(--darkgreen-color),
+		var(--text-secondary)
+	);
 	width: 100vw;
 	height: 2em;
 	left: 0;
@@ -286,7 +280,29 @@ footer {
 	position: fixed;
 }
 
-footer div+div {
+footer {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100vw;
+	height: 15vh;
+	min-height: 120px;
+}
+
+#past-list div.gradient {
+	position: relative;
+	background-image: linear-gradient(
+		0deg,
+		var(--darkgreen-color),
+		var(--text-secondary)
+	);
+	width: 100vw;
+	height: 2em;
+	left: 0;
+	bottom: 0;
+}
+
+footer div + div {
 	height: 100%;
 	min-height: 120px;
 	width: 100vw;
@@ -317,7 +333,7 @@ footer h3 {
 	font-family: var(--narrow-text);
 }
 
-footer h3+h3 {
+footer h3 + h3 {
 	position: absolute;
 	right: 0;
 	top: 0;
@@ -336,7 +352,7 @@ footer a {
 	vertical-align: middle;
 	font-family: var(--narrow-text);
 	margin: 0 1em;
-	align-items: center;
+	align-items: top;
 }
 
 footer a:hover {
@@ -349,26 +365,29 @@ footer a:hover p img {
 	border-style: none none solid none;
 }
 
-footer a+a {
+footer a + a {
 	border-top: 1px dashed var(--grey-color);
 }
 
-footer div+div a:last-of-type {
+footer div + div a:last-of-type {
 	margin-bottom: 2em;
 }
 
 footer a p {
-	margin: 0;
+	margin-top: 1em;
 }
 
 footer a p:nth-child(2) {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
+	margin-top: 0;
 }
 
 footer a p img {
 	width: 50px;
+	height: max-content;
+	height: fit-content;
 	border-radius: 20em;
 	border: 1px solid white;
 	border-style: none none solid none;
@@ -379,5 +398,19 @@ footer a p img {
 @media (max-width: 465px) {
 	#offline span + img {
 		width: 100%;
+	}
+
+	#tlkio {
+		margin: 2em 0.5em 4em 0.5em;
+		width: inherit;
+		height: 350px;
+	}
+
+	footer#past-list a p {
+		margin: 0;
+	}
+
+	footer#past-list a p:nth-child(2) {
+		align-items: start;
 	}
 }
