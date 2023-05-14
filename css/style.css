@@ -109,7 +109,15 @@ section#live {
 }
 
 #live h2 {
-	background-color: var(--yellow-color);
+	background-color: var(--purple-color);
+}
+
+#live h2 + img {
+	position: absolute;
+	top: 0.75em;
+	left: 1em;
+	width: 12%;
+	z-index: 1;
 }
 
 /* UNDER CONSTRUCTION PAGE */
@@ -417,5 +425,13 @@ footer a p img {
 
 	footer a p img {
 		height: auto;
+	}
+
+	#live h2 + img {
+		display: none;
+	}
+
+	mux-player {
+		width: 100%;
 	}
 }
