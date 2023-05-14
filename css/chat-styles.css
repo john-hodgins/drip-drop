@@ -153,3 +153,11 @@ aside.aside div.counter-button {
 	border: none;
 	width: fit-content;
 }
+
+.scrollButton {
+	display: none;
+}
+
+.scrollButton.show {
+	display: none;
+}

@@ -117,6 +117,7 @@ section#live {
 	top: 0.75em;
 	left: 1em;
 	width: 12%;
+	min-width: 180px;
 	z-index: 1;
 }
 
@@ -178,6 +179,7 @@ div p {
 	background-color: var(--peach-color);
 	margin: 1em;
 	cursor: grab;
+	z-index: 1;
 }
 
 .infobutton:active {
