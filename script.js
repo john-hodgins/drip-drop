@@ -8,6 +8,7 @@ function addPlayer(data, id) {
 				mux.setAttribute('stream-type', 'live');
 				document.getElementById('chat').classList.remove('hidden');
 				document.getElementById('offline').classList.add('hidden');
+				document.getElementById('footertitle').classList.add('hidden');
 			} else {
 				mux.setAttribute('stream-type', 'on-demand');
 			}
