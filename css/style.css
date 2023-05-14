@@ -178,6 +178,7 @@ div p {
 	background-color: var(--peach-color);
 	margin: 1em;
 	cursor: grab;
+	z-index: 1;
 }
 
 .infobutton:active {
