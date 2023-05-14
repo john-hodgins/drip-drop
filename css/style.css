@@ -284,11 +284,7 @@ span p {
 
 /* FOOTER // PAST STREAM LIST */
 section + div.gradient {
-	background-image: linear-gradient(
-		0deg,
-		var(--darkgreen-color),
-		var(--text-secondary)
-	);
+	background-image: linear-gradient(0deg, var(--darkgreen-color), #fff0);
 	width: 100vw;
 	height: 2em;
 	left: 0;
@@ -307,11 +303,7 @@ footer {
 
 #past-list div.gradient {
 	position: relative;
-	background-image: linear-gradient(
-		0deg,
-		var(--darkgreen-color),
-		var(--text-secondary)
-	);
+	background-image: linear-gradient(0deg, var(--darkgreen-color), #fff0);
 	width: 100vw;
 	height: 2em;
 	left: 0;
