@@ -154,6 +154,10 @@ pre {
 	opacity: 0;
 }
 
+.purple {
+	color: var(--purple-color);
+}
+
 a {
 	text-decoration: none;
 	color: var(--text-colou);

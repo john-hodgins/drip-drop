@@ -9,6 +9,7 @@ function addPlayer(data, id) {
 				document.getElementById('chat').classList.remove('hidden');
 				document.getElementById('offline').classList.add('hidden');
 				document.getElementById('footertitle').classList.add('ignore');
+				document.getElementById('footerlive').classList.add('.purple');
 			} else {
 				mux.setAttribute('stream-type', 'on-demand');
 			}
