@@ -117,6 +117,7 @@ section#live {
 	top: 0.75em;
 	left: 1em;
 	width: 12%;
+	min-width: 180px;
 	z-index: 1;
 }
 
