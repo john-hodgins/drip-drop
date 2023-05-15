@@ -20,6 +20,7 @@
 	--grey-color: #a7b5ae;
 	--yellow-color: #ddd100;
 	--purple-color: #af95dc;
+	--lightblue-color: rgb(120, 206, 251);
 	--peach-color: #e276c9;
 	--green-color: #77e629;
 	--darkgreen-color: #11440e;
@@ -284,7 +285,7 @@ span p {
 }
 
 .past h2 {
-	background-color: var(--grey-color);
+	background-color: var(--lightblue-color);
 	width: fit-content;
 	padding-right: 1em;
 	padding-left: 1em;
