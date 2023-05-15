@@ -8,9 +8,9 @@ function addPlayer(data, id) {
 				mux.setAttribute('stream-type', 'live');
 				document.getElementById('chat').classList.remove('hidden');
 				document.getElementById('offline').classList.add('hidden');
-				document.getElementById('comingup').classList.add('hidden');
-				document.getElementById('currently').classList.remove('hidden');
-				document.getElementById('footerlive').classList.add('purple');
+				document.getElementById('footerTitle').classList.add('hidden');
+				document.getElementById('footerTitleLive').classList.remove('hidden');
+				document.getElementById('footerStream').classList.add('purple');
 			} else {
 				mux.setAttribute('stream-type', 'on-demand');
 			}
