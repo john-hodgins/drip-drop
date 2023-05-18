@@ -461,6 +461,7 @@ footer a p img {
 	footer#past-list {
 		height: max-content;
 		overflow-x: hidden;
+		max-height: 145px;
 	}
 
 	footer#past-list a {
