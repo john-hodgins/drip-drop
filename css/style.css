@@ -292,22 +292,18 @@ span p {
 }
 
 .video-credits {
-	text-align: center;
 	max-width: 960px;
-	margin: 0 auto;
-	height: 100%;
-	overflow-y: scroll;
-
+	margin: 1em auto;
 	width: 100%;
+	display: grid;
+	grid-template-columns: minmax(min-content, 10%) 4fr;
+	grid-gap: 0.5em 0;
 }
-.video-credits:last-child {
-	padding-bottom: 14vh;
-}
-
-ul {
-	list-style-type: none;
-	padding: 0;
-	text-align: center;
+.video-credits h5 {
+	margin: 0.125em;
+	padding-right: 1em;
+	text-transform: uppercase;
+	font-family: var(--narrow-text);
 }
 
 /* FOOTER // PAST STREAM LIST */
