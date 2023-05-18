@@ -451,12 +451,40 @@ footer a p img {
 		height: 350px;
 	}
 
+	section#offline {
+		height: 88vh;
+		margin-bottom: 12vh;
+	}
+
+	/* FOOTER STYLING */
+
+	#past-list div.gradient {
+		height: 1em;
+	}
+
+	footer#past-list {
+		height: max-content;
+		overflow-x: hidden;
+	}
+
+	footer#past-list a {
+		grid-gap: 1em;
+	}
+
+	footer div + div a:last-of-type {
+		margin-bottom: 1em;
+	}
+
 	footer#past-list a p {
 		margin: 0;
 	}
 
 	footer#past-list a p:nth-child(2) {
 		align-items: start;
+	}
+
+	footer#past-list a p:nth-child(4) {
+		display: none;
 	}
 
 	footer a {
