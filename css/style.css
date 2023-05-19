@@ -87,6 +87,7 @@ section {
 	flex-direction: column;
 	align-items: center;
 	height: inherit;
+	min-height: 900px;
 }
 
 section h2 {
@@ -306,6 +307,10 @@ span p {
 	font-family: var(--narrow-text);
 }
 
+.video-credits p {
+	margin-right: 0.5em;
+}
+
 /* FOOTER // PAST STREAM LIST */
 section + div.gradient {
 	background-image: linear-gradient(0deg, var(--darkgreen-color), #fff0);
@@ -435,7 +440,21 @@ footer a p img {
 	border-style: none none solid none;
 	margin-right: 1em;
 }
+/* MOBILE LANDSCAPE*/
 
+@media (max-height: 400px) {
+	div.infobutton {
+		left: 0;
+		max-width: min-content;
+	}
+	section#offline {
+		min-height: 400px;
+	}
+
+	section#offline span + img {
+		display: none;
+	}
+}
 /* MOBILE */
 @media (max-width: 465px) {
 	#offline span + img {
