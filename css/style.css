@@ -440,21 +440,7 @@ footer a p img {
 	border-style: none none solid none;
 	margin-right: 1em;
 }
-/* MOBILE LANDSCAPE*/
 
-@media (max-height: 400px) {
-	div.infobutton {
-		left: 0;
-		max-width: min-content;
-	}
-	section#offline {
-		min-height: 400px;
-	}
-
-	section#offline span + img {
-		display: none;
-	}
-}
 /* MOBILE */
 @media (max-width: 465px) {
 	#offline span + img {
@@ -518,5 +504,25 @@ footer a p img {
 
 	mux-player {
 		width: 100%;
+	}
+}
+
+/* MOBILE LANDSCAPE*/
+
+@media (max-height: 400px) {
+	div.infobutton {
+		left: 0;
+		max-width: min-content;
+	}
+	section#offline {
+		min-height: 400px;
+	}
+
+	section#offline span + img {
+		display: none;
+	}
+
+	footer {
+		display: none;
 	}
 }
