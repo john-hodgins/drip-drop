@@ -185,7 +185,7 @@ div p {
 	background-color: var(--peach-color);
 	margin: 1em;
 	cursor: grab;
-	z-index: 1;
+	z-index: 2;
 }
 
 .infobutton:active {
@@ -228,6 +228,24 @@ div p {
 	cursor: grabbing;
 	cursor: -moz-grabbing;
 	cursor: -webkit-grabbing;
+}
+
+/* PREVIOUS BUTTON */
+
+div.infobutton + div.infobutton {
+	background-color: var(--lightblue-color);
+	margin-top: 4.75em;
+	writing-mode: vertical-rl;
+	text-orientation: upright;
+	font-family: var(--narrow-text);
+	text-transform: uppercase;
+	padding: 0.8em 5px;
+	z-index: 1;
+}
+
+div.infobutton + div.infobutton:hover {
+	border-radius: 1em;
+	transition: linear 0.15s;
 }
 
 /* 00 SECTION --> OFFLINE DISPLAY PAGE */
