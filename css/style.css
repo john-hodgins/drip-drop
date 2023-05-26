@@ -244,7 +244,6 @@ div.infobutton + div.infobutton {
 }
 
 div.infobutton + div.infobutton:hover {
-	border-radius: 1em;
 	transition: linear 0.15s;
 }
 
@@ -460,6 +459,25 @@ footer a p img {
 	border: 1px solid white;
 	border-style: none none solid none;
 	margin-right: 1em;
+}
+
+/* PREVIOUS -> CATELOGUE */
+div.prev-gradient-top {
+	background-image: linear-gradient(0deg, #fff0, var(--lightblue-color));
+	width: 100vw;
+	height: 4em;
+	left: 0;
+	top: 0;
+	position: fixed;
+}
+
+div.prev-gradient-bottom {
+	background-image: linear-gradient(0deg, var(--lightblue-color), #fff0);
+	width: 100vw;
+	height: 2em;
+	left: 0;
+	bottom: 0;
+	position: fixed;
 }
 
 @media (max-width: 960px) {
