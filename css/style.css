@@ -167,7 +167,7 @@ pre {
 
 a {
 	text-decoration: none;
-	color: var(--text-colou);
+	color: var(--text-color);
 }
 
 div p {
@@ -464,7 +464,7 @@ footer a p img {
 div.prev-gradient-top {
 	background-image: linear-gradient(0deg, #fff0, rgb(120 206 251 / 65%));
 	width: 100vw;
-	height: 4em;
+	height: 4.5em;
 	left: 0;
 	top: 0;
 	position: fixed;
@@ -477,6 +477,65 @@ div.prev-gradient-bottom {
 	left: 0;
 	bottom: 0;
 	position: fixed;
+}
+
+main.catelogue {
+}
+main.catelogue span {
+	margin: 0;
+	padding: 0;
+	width: inherit;
+	color: var(--grey-color);
+	z-index: 1;
+	position: sticky;
+	top: 0;
+}
+main.catelogue span,
+main.catelogue a {
+	display: grid;
+	grid-template-columns: 1fr 80px 1fr 3fr;
+	grid-gap: 0.5em;
+	padding: 1em 3em 1em 1em;
+}
+
+main.catelogue span p {
+	width: auto;
+	position: sticky;
+	font-family: var(--narrow-text);
+	text-transform: uppercase;
+}
+main.catelogue span p:nth-child(2) {
+	grid-column: 2 / 4;
+}
+
+main.catelogue a {
+	align-items: flex-start;
+	padding: 2em 0;
+}
+
+main.catelogue a h1 {
+	font-weight: normal;
+	font-family: var(--narrow-text);
+	padding-right: 1em;
+	margin-bottom: 0;
+}
+
+main.catelogue a h1:first-of-type {
+	padding-left: 1em;
+}
+
+main.catelogue a h1:last-of-type {
+	padding-right: 1em;
+}
+
+main.catelogue a img {
+	height: auto;
+	max-width: 80px;
+	width: 100%;
+}
+
+main.catelogue a + a {
+	border-top: 1px dashed var(--text-color);
 }
 
 @media (max-width: 960px) {
@@ -546,9 +605,9 @@ div.prev-gradient-bottom {
 /* MOBILE LANDSCAPE*/
 @media only screen and (max-height: 400px) and (orientation: landscape) {
 	div.infobutton {
-		left: 0;
-		max-width: min-content;
+		display: none;
 	}
+
 	section#offline {
 		min-height: 100vh;
 	}
