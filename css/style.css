@@ -385,7 +385,7 @@ footer h3 {
 	text-transform: uppercase;
 	/* border: 1px solid var(--grey-color); */
 	text-decoration: underline;
-	border-radius: 100%;
+	/* border-radius: 100%; */
 	width: 15%;
 	min-width: 400px;
 	font-family: var(--narrow-text);
@@ -424,7 +424,6 @@ footer a:hover {
 
 footer a:hover p img {
 	border: 1px solid var(--purple-color);
-	border-style: none none solid none;
 }
 
 footer a + a {
@@ -455,15 +454,15 @@ footer a p img {
 	height: max-content;
 	height: fit-content;
 	height: auto;
-	border-radius: 20em;
-	border: 1px solid white;
-	border-style: none none solid none;
+	/* border-radius: 20em; */
+	border: 1px solid var(--grey-color);
+
 	margin-right: 1em;
 }
 
 /* PREVIOUS -> CATELOGUE */
 div.prev-gradient-top {
-	background-image: linear-gradient(0deg, #fff0, var(--lightblue-color));
+	background-image: linear-gradient(0deg, #fff0, rgb(120 206 251 / 65%));
 	width: 100vw;
 	height: 4em;
 	left: 0;
@@ -472,7 +471,7 @@ div.prev-gradient-top {
 }
 
 div.prev-gradient-bottom {
-	background-image: linear-gradient(0deg, var(--lightblue-color), #fff0);
+	background-image: linear-gradient(0deg, rgb(120 206 251 / 65%), #fff0);
 	width: 100vw;
 	height: 2em;
 	left: 0;
