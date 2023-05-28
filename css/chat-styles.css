@@ -161,3 +161,38 @@ aside.aside div.counter-button {
 .scrollButton.show {
 	display: none;
 }
+
+div.footer-wrapper div#join.join {
+	font-family: var(--text-color);
+	border-radius: 0;
+	border: 1px dashed var(--text-color);
+}
+
+div.footer-wrapper div#join.join span.join-hl {
+	color: var(--green-color);
+}
+
+input#participant_nickname.input-text.join-input--troll {
+	border: none none solid none;
+	border-bottom: 1px solid var(--green-color);
+	border-radius: 0px;
+	padding: 3px;
+}
+
+.theme--minimal .input-text {
+	border-color: var(--green-color);
+}
+
+button#twitter-button,
+button#fb-button {
+	border: none;
+	border-bottom: 1px solid var(--green-color);
+	border-radius: 0;
+	width: 30%;
+	padding-left: 3px;
+}
+
+button#twitter-button svg,
+button#fb-button svg {
+	display: none;
+}
