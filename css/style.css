@@ -17,7 +17,7 @@
 	--serif-text: 'Cambo', serif;
 	--text-color: #000;
 	--text-secondary: #fff;
-	--grey-color: #a7b5ae;
+	--grey-color: #cacaca;
 	--yellow-color: #ddd100;
 	--purple-color: #af95dc;
 	--lightblue-color: rgb(120, 206, 251);
@@ -102,7 +102,7 @@ section h2 {
 	min-width: 200px;
 	font-family: var(--narrow-text);
 	padding: 0.25em 0 0 0;
-	margin: 1em auto 0.5em;
+	margin: 0.75em auto;
 }
 
 #chat h2 {
@@ -161,8 +161,16 @@ pre {
 	opacity: 0;
 }
 
+.green-color {
+	color: var(--darkgreen-color);
+}
+
 .purple {
-	color: var(--purple-color);
+	background-color: var(--purple-color);
+}
+
+.purple-gradient {
+	background-image: linear-gradient(0deg, var(--purple-color), #fff0);
 }
 
 a {
@@ -184,13 +192,20 @@ div p {
 	border: 1px solid var(--text-color);
 	background-color: var(--peach-color);
 	margin: 1em;
-	cursor: grab;
+	cursor: pointer;
 	z-index: 2;
 }
 
 .infobutton:active {
 	cursor: grabbing;
 }
+
+.infobutton:hover {
+	transition: linear 0.15s;
+	box-shadow: rgb(236, 112, 209) 0px 3px 15px,
+		rgba(232, 100, 212, 0.838) -1px -1px 12px;
+}
+
 #dropdown p:last-of-type {
 	margin: 1.5em 0 0.5em 0;
 }
@@ -230,6 +245,31 @@ div p {
 	cursor: -webkit-grabbing;
 }
 
+/* HOME BUTTON - 3 DRIPS LOGO, TOP RIGHT */
+a.dripsbtn {
+	position: fixed;
+	top: 0;
+	z-index: 10;
+	margin: 0.6em;
+}
+
+a.dripsbtn img {
+	width: 45px;
+	height: auto;
+}
+
+a.dripsbtn img:hover {
+	-webkit-filter: drop-shadow(4px 4px 4px var(--grey-color))
+		drop-shadow(-4px -4px 4px var(--grey-color));
+	filter: drop-shadow(4px 4px 4px var(--grey-color))
+		drop-shadow(-4px -4px 4px var(--grey-color));
+	transition: linear 0.15s;
+}
+
+a.dripsbtn img:hover::after {
+	content: 'drip-drop.tv';
+}
+
 /* PREVIOUS BUTTON */
 
 div.infobutton + div.infobutton {
@@ -245,6 +285,8 @@ div.infobutton + div.infobutton {
 
 div.infobutton + div.infobutton:hover {
 	transition: linear 0.15s;
+	box-shadow: rgb(18, 160, 255) 0px 3px 15px,
+		rgba(53, 174, 255, 0.838) -1px -1px 12px;
 }
 
 /* 00 SECTION --> OFFLINE DISPLAY PAGE */
@@ -282,14 +324,14 @@ img {
 	max-width: 500px;
 }
 
-span {
+span.phraseToggle {
 	text-align: center;
 	width: 100vw;
 	position: relative;
 	padding-bottom: 3em;
 }
 
-span p {
+span.phraseToggle p {
 	position: absolute;
 	width: 100vw;
 }
@@ -306,7 +348,7 @@ span p {
 }
 
 .past h2 {
-	background-color: var(--lightblue-color);
+	background-color: var(--grey-color);
 	width: fit-content;
 	padding-right: 1em;
 	padding-left: 1em;
@@ -339,6 +381,7 @@ section + div.gradient {
 	left: 0;
 	bottom: 0;
 	position: fixed;
+	cursor: grab;
 }
 
 footer {
@@ -349,6 +392,7 @@ footer {
 	height: 14vh;
 	min-height: 120px;
 	z-index: 12;
+	cursor: grab;
 }
 
 #past-list div.gradient {
@@ -367,15 +411,10 @@ footer div + div {
 	position: relative;
 	bottom: 0;
 	left: 0;
-	color: var(--grey-color);
+	color: var(--purple-color);
 	background: var(--darkgreen-color);
 	font-family: var(--narrow-text);
 	overflow-y: scroll;
-	/* background: linear-gradient(
-		0deg,
-		var(--brown-color) 75%,
-		var(--text-secondary)
-	); */
 }
 
 footer h3 {
@@ -383,16 +422,15 @@ footer h3 {
 	font-weight: 400;
 	margin: 0.5em auto 0;
 	text-transform: uppercase;
-	/* border: 1px solid var(--grey-color); */
 	text-decoration: underline;
-	/* border-radius: 100%; */
 	width: 15%;
 	min-width: 400px;
 	font-family: var(--narrow-text);
+	color: var(--grey-color);
 }
 
 footer h3:nth-child(2) {
-	color: var(--purple-color);
+	/* color: var(--darkgreen-color); */
 }
 
 footer h3:nth-child(3) {
@@ -405,73 +443,49 @@ footer h3:nth-child(3) {
 	padding-right: 1em;
 }
 
-footer a {
+footer div span {
 	display: grid;
-	grid-template-columns: 1fr 2fr 4fr 1fr;
-	grid-gap: 3em;
-	background: var(--dark-color);
-	padding: 0.5em 0;
+	grid-template-columns: 1fr 70px 2fr 3fr;
+	grid-gap: 0.5em;
+	color: var(--purple-color);
 	vertical-align: middle;
 	font-family: var(--narrow-text);
 	margin: 0 1em;
 	align-items: top;
+	font-size: 1.25em;
 }
 
-footer a:hover {
-	transition: var(--fade-in-effect);
-	color: var(--purple-color);
-}
-
-footer a:hover p img {
-	border: 1px solid var(--purple-color);
-}
-
-footer a + a {
+footer span + span {
 	border-top: 1px dashed var(--grey-color);
 }
 
-footer div + div a:last-of-type {
+footer div + div span:last-of-type {
 	margin-bottom: 2em;
 }
 
-footer a p {
+footer span p {
 	margin-top: 1em;
 }
 
-footer a p:nth-child(2) {
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	margin-top: 0;
-}
-
-footer a p:nth-child(4) {
-	text-align: right;
-}
-
-footer a p img {
-	width: 50px;
+footer span img {
+	width: 100%;
 	height: max-content;
 	height: fit-content;
 	height: auto;
-	/* border-radius: 20em; */
-	border: 1px solid var(--grey-color);
-
-	margin-right: 1em;
 }
 
 /* PREVIOUS -> CATELOGUE */
 div.prev-gradient-top {
-	background-image: linear-gradient(0deg, #fff0, rgb(120 206 251 / 65%));
+	background-image: linear-gradient(0deg, #fff0, rgb(120 206 251 / 45%));
 	width: 100vw;
-	height: 4.5em;
+	height: 6em;
 	left: 0;
 	top: 0;
 	position: fixed;
 }
 
 div.prev-gradient-bottom {
-	background-image: linear-gradient(0deg, rgb(120 206 251 / 65%), #fff0);
+	background-image: linear-gradient(0deg, rgb(120 206 251 / 45%), #fff0);
 	width: 100vw;
 	height: 2em;
 	left: 0;
@@ -480,51 +494,62 @@ div.prev-gradient-bottom {
 }
 
 main.catelogue {
+	margin-top: 4em;
 }
 main.catelogue span {
 	margin: 0;
-	padding: 0;
+	padding: 0 5em 0 0;
 	width: inherit;
 	color: var(--grey-color);
 	z-index: 1;
 	position: sticky;
 	top: 0;
 }
+
 main.catelogue span,
 main.catelogue a {
 	display: grid;
-	grid-template-columns: 1fr 80px 1fr 3fr;
+	grid-template-columns: 0.9fr 80px 1fr 3fr;
 	grid-gap: 0.5em;
-	padding: 1em 3em 1em 1em;
 }
 
 main.catelogue span p {
 	width: auto;
 	position: sticky;
-	font-family: var(--narrow-text);
+	font-family: 'Helvetica', sans-serif;
 	text-transform: uppercase;
+	margin-bottom: 0;
+}
+
+main.catelogue span p:nth-child(1) {
+	padding-left: 1.5em;
 }
 main.catelogue span p:nth-child(2) {
-	grid-column: 2 / 4;
+	grid-column: 3 / 4;
 }
 
 main.catelogue a {
 	align-items: flex-start;
-	padding: 2em 0;
+	padding: 2em 5em 2em 0;
 }
 
-main.catelogue a h1 {
+main.catelogue a:hover {
+	color: var(--lightblue-color);
+	transition: linear 0.25s;
+}
+
+main.catelogue a h2 {
 	font-weight: normal;
 	font-family: var(--narrow-text);
-	padding-right: 1em;
+	padding-right: 3em;
 	margin-bottom: 0;
 }
 
-main.catelogue a h1:first-of-type {
+main.catelogue a h2:first-of-type {
 	padding-left: 1em;
 }
 
-main.catelogue a h1:last-of-type {
+main.catelogue a h2:last-of-type {
 	padding-right: 1em;
 }
 

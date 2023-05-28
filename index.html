@@ -30,7 +30,7 @@
 <body>
 		<!-- INFO BUTTON -->
 		<div class="infobutton">
-			<p title="Info"
+			<p title="&#8618; info"
 				class="right-align"
 				onclick="displayContent()"
 
@@ -61,15 +61,18 @@
 
 	<!-- PREVIOUS BUTTON -->
 		<div class="infobutton">
-			<a href="previous/catelogue.htm" title="index of previous streams"
+			<a href="previous/catelogue.htm" title="&#8618; index of previous streams"
 			>
 				Previous
 			</a>
 	</div>
 
+	<!-- 3 DRIPS LOGO, top left corner-->
+	<a class="dripsbtn" href="#" title="&#8618; drip-drop.tv homepage"><img src="assets/drips.png" alt="icon of three drops in reference to drip-drop.tv" width="20px"></a>
+
 	<!-- 00 SECTION // OFFLINE HOMEPAGE -->
 		<section id="offline" class="hide">
-			<span class="">
+			<span class="phraseToggle">
 				<img
 					class="logo"
 					src="assets/drip-drop logo.png"
@@ -172,56 +175,43 @@
 
 
 	<!-- FOOTER // PAST STREAM LIST -->
-	<div class="gradient"></div>
+	<div title="&#8618; click to show content" class="gradient" onclick="displayContent()"
 
-	<footer id="past-list">
+				;></div>	
+	<footer title="&#8618; click to hide content" id="past-list" onclick="displayContent()"
+
+				;>
 		<div class="gradient"></div>
-		<div>
-			<h3 id="footerTitle">Previously</h3><h3 id="footerTitleLive"  class="hidden" >Currently Streaming</h3>
-			<h3>&#8595;</h3>
+		<div  class="live-purple">
 
-			<!-- *** manually fill for additional archived videos ***-->
+			<h3 id="footerTitle">Next</h3><h3 id="footerTitleLive"  class="hidden" >Streaming</h3>
+			<!-- <h3>&#8595;</h3> -->
 
-			<!-- #01 AMY'S BOOK LAUNCH TORONTO -->
-			<a id="footerStream" href="#archive-one" title="stream details">
-				<p>Sunday May 14, 2023</p>
-				<p>
-					<img width="20px" height="20px" src="assets/baby-book.png" title="Image by Tina Guo" />Baby Book Launch
-				</p>
-				<p>
-					Amy Lam, Mei-Mei Berssenbrugge, Fan Wu, Gunnar, New Chance, Marvin
-					Luvualu Antonio, Robin Simpson, Matt Smith, Oliver Husain, Monica Moraru, Khanh Tudo
-				</p>
-				<p>02:02:19</p>
-			</a>
+			<!-- manually update with next streaming event -->
+			<span id="footerStream">
 
-<!-- #02 C00kie M0nster !nterpreter -->
-						<a id="footerStream" href="#archive-two" title="stream details">
-				<p>Sunday November 14, 2021</p>
-				<p>
-					<img width="20px" height="20px" src="assets/cookie-monster.png" title="C**kie M*nster *nterpreter" />C**kie M*nster *nterpreter
+				<!-- ** date + time -->
+				<p>Thursday, June 8 2023</br> &#10088;6-8pm&#10089;</p>
+			
+				<!-- ** thumbnail image -->
+				<img width="70px" height="70px" src="assets/daffythonk.png" title="daffythonk" />
+					
+				<!-- ** title -->
+					<p>Thonk Piece - Live from Cosima von Bonin’s Church of Daffy
 				</p>
-				<p>
-					Amy Lam, Oliver Husain, Aliya Pabani, Matt Smith, Monica Moraru
-				</p>
-				<p>00:41:40</p>
-			</a>
 
-<!-- #03 Streamy Windows -->
-						<a id="footerStream" href="#archive-three" title="stream details">
-				<p>Thursday, October 29, 2020</p>
+				<!-- ** artists -->
 				<p>
-					<img width="20px" height="20px" src="assets/streamy-windows.png" title="Streamy Windows" />Streamy Windows
+					Mary Messhausen, Proddy Produzentin, Macy Rodman, Lex Vaughn, Oliver Husain
 				</p>
-				<p>
-					Oliver Husain, Megumi Kokuba, Charlton Diaz, Anni Spadafora, Iris Ng, Serena Lee, Vanessa Magic, Matt Smith, Art Museum of UofT for Immaterial Architecture, Yan Wu
-				</p>
-				<p>00:55:34</p>
-			</a>
-		
+			</span>
+	
 		</div>
+
 	</footer>
+
 </body>
+
 <script src="script.js"></script>
 
 </html>
