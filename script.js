@@ -46,9 +46,19 @@ fetch(url)
 	});
 
 // dropdown button
-const dropdown = document.getElementById('dropdown');
-function displayContent() {
-	dropdown.classList.toggle('hide');
+// const dropdown = document.querySelector('.site-content'); // store in a variable so we can reference the element in multiple locations
+// scrollContent.addEventListener(
+// 	'scroll',
+// 	() => {
+// 		const scrolled = scrollContent.scrollTop; // reuse `scrollContent` innstead of querying the DOM again
+// 		console.log(scrolled);
+// 	},
+// 	{ passive: true }
+// );
+
+const dropdownInfo = document.getElementById('dropdown');
+function displayInfo() {
+	dropdownInfo.classList.toggle('hide');
 }
 
 // dripdrop.tv text toggle
