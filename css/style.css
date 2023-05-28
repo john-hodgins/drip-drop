@@ -516,7 +516,7 @@ main.catelogue a {
 main.catelogue span p {
 	width: auto;
 	position: sticky;
-	font-family: 'Helvetica', sans-serif;
+	font-family: var(--narrow-text);
 	text-transform: uppercase;
 	margin-bottom: 0;
 }
