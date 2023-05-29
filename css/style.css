@@ -595,7 +595,7 @@ main.catelogue a + a {
 	}
 
 	.past {
-		margin-top: 1.8em;
+		padding-top: 15%;
 	}
 	#past-list div.gradient {
 		height: 1em;
