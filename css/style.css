@@ -81,6 +81,8 @@ mux-player {
 	width: 960px;
 }
 
+/* GENERAL STYLING */
+
 section {
 	width: 100vw;
 	display: flex;
@@ -106,7 +108,8 @@ section h2 {
 }
 
 #chat h2 {
-	background-color: var(--green-color);
+	/* background-color: var(--green-color); */
+	border: none;
 }
 
 section#live {
@@ -126,32 +129,6 @@ section#live {
 	min-width: 180px;
 	z-index: 1;
 }
-
-/* UNDER CONSTRUCTION PAGE */
-
-.inprogress {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	height: 70vh;
-	min-height: fit-content;
-	justify-content: space-evenly;
-}
-
-pre:first-of-type {
-	background: linear-gradient(127deg, #37bff5, #b7e5e7a0, #4272f6ea);
-	background-size: 300% 100%;
-	animation: gradient 16s linear infinite;
-	animation-direction: alternate;
-}
-
-pre {
-	/* background-color: #62daff8a; */
-	border-radius: 10em;
-	width: fit-content;
-}
-
-/* GENERAL STYLING */
 
 .hidden {
 	display: none !important;
@@ -180,6 +157,30 @@ a {
 
 div p {
 	margin: 0;
+}
+
+/* UNDER CONSTRUCTION PAGE */
+
+.inprogress {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 70vh;
+	min-height: fit-content;
+	justify-content: space-evenly;
+}
+
+pre:first-of-type {
+	background: linear-gradient(127deg, #37bff5, #b7e5e7a0, #4272f6ea);
+	background-size: 300% 100%;
+	animation: gradient 16s linear infinite;
+	animation-direction: alternate;
+}
+
+pre {
+	/* background-color: #62daff8a; */
+	border-radius: 10em;
+	width: fit-content;
 }
 
 /* INFO BUTTON */
@@ -289,7 +290,7 @@ div.infobutton + div.infobutton:hover {
 		rgba(53, 174, 255, 0.838) -1px -1px 12px;
 }
 
-/* 00 SECTION --> OFFLINE DISPLAY PAGE */
+/* 01 SECTION --> OFFLINE DISPLAY PAGE */
 
 #offline,
 .past {
@@ -339,6 +340,15 @@ span.phraseToggle p {
 #phrases {
 	font-family: var(--body-text);
 	margin-top: 0;
+}
+
+/* 02 MAIN --> LIVE STREAM LAYOUT */
+
+#live.layout {
+	display: flex;
+	flex-direction: row;
+	align-content: flex-start;
+	flex-wrap: wrap;
 }
 
 /* 03 SECTION --> PAST VIDEOS */
