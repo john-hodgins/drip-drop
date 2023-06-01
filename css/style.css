@@ -216,7 +216,7 @@ a.dripsbtn img {
 	height: auto;
 }
 
-a.dripsbtn img:hover {
+a.dripsbtn img:hover, #offline span img:hover {
 	-webkit-filter: drop-shadow(4px 4px 4px var(--grey-color))
 		drop-shadow(-4px -4px 4px var(--grey-color));
 	filter: drop-shadow(4px 4px 4px var(--grey-color))
