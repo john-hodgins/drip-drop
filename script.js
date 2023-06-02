@@ -10,7 +10,9 @@ function addPlayer(data, id) {
 				document.getElementById('offline').classList.add('hidden');
 				document.getElementById('footerTitle').classList.add('hidden');
 				document.getElementById('footerTitleLive').classList.remove('hidden');
-				document.getElementById('footerStream').classList.add('purple');
+				document.getElementById('footerStream').classList.add('green-color');
+				document.getElementByClass('gradient').classList.add('purple-gradient');
+				document.getElementByClass('live-purple').classList.add('purple');
 			} else {
 				mux.setAttribute('stream-type', 'on-demand');
 			}
@@ -43,8 +45,23 @@ fetch(url)
 		}
 	});
 
-// dripdrop.tv text toggle
+// dropdown button
+// const dropdown = document.querySelector('.site-content'); // store in a variable so we can reference the element in multiple locations
+// scrollContent.addEventListener(
+// 	'scroll',
+// 	() => {
+// 		const scrolled = scrollContent.scrollTop; // reuse `scrollContent` innstead of querying the DOM again
+// 		console.log(scrolled);
+// 	},
+// 	{ passive: true }
+// );
 
+const dropdownInfo = document.getElementById('dropdown');
+function displayInfo() {
+	dropdownInfo.classList.toggle('hide');
+}
+
+// dripdrop.tv text toggle
 var dripdropPhrases = [
 	'a place to stream',
 	'inconsistent and juicy',
@@ -56,18 +73,13 @@ var dripdropPhrases = [
 	'never in your wildest streams',
 	'growing puddle',
 ];
-
 function newPhrase() {
 	var randomNumber = Math.floor(Math.random() * dripdropPhrases.length);
-
 	document.getElementById('phrases').innerHTML = dripdropPhrases[randomNumber];
 }
 
-// footer
-const pastVideo = ['date', 'img', 'title', 'artist', 'duration'];
-
-// dropdown button
-const dropdown = document.getElementById('dropdown');
+// footer show/hide content
+const displayFooter = document.getElementById('past-list');
 function displayContent() {
-	dropdown.classList.toggle('hide');
+	displayFooter.classList.toggle('hide');
 }
