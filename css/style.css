@@ -62,25 +62,6 @@ body {
 	scroll-behavior: smooth;
 }
 
-#tlkio {
-	margin-bottom: 8em;
-	width: auto;
-	height: 350px;
-	overflow-y: scroll;
-}
-
-#tlkio iframe {
-	border: none;
-	/* height: 100%;
-	width: 100%; */
-	max-width: 960px;
-}
-
-section mux-player {
-	--pip-button: none;
-	width: 960px;
-}
-
 /* GENERAL STYLING */
 
 .hidden {
@@ -301,16 +282,32 @@ span.phraseToggle p {
 
 /* 02 MAIN --> LIVE STREAM LAYOUT */
 
+#tlkio {
+
+	width: auto;
+	min-height: 350px;
+	height: 100%
+	overflow-y: scroll;
+}
+
+#tlkio iframe {
+	border: none;
+	/* height: 100%;
+	width: 100%; */
+	max-width: 960px;
+}
+
+
 #livelayout {
 	display: grid;
-	grid-template-columns: minmax(960px, 1fr) 40%;
-
+	grid-template-columns: 60% 40%;
 	grid-gap: 1em;
 }
 
-#livelayout div {
+#livelayout div#chat {
 	display: flex;
-	justify-content: center;
+    justify-content: space-between;
+	flex-direction: column;
 }
 
 #livelayout div::before {
@@ -331,6 +328,7 @@ span.phraseToggle p {
 #livelayout h2 {
 	background-color: var(--purple-color);
 	border: 1px solid var(--text-color);
+	grid-column: 1 / 3;
 }
 
 /* 
@@ -351,6 +349,11 @@ section {
 	flex-direction: column;
 	align-items: center;
 	height: inherit;
+}
+
+section mux-player {
+	--pip-button: none;
+	width: 960px;
 }
 
 section:not(#offline) {
