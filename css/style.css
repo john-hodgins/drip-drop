@@ -301,6 +301,7 @@ span.phraseToggle p {
 #livelayout {
 	display: grid;
 	grid-template-columns: 60% 40%;
+	grid-template-rows: min-content;
 	grid-gap: 1em;
 }
 
@@ -310,17 +311,11 @@ span.phraseToggle p {
 	flex-direction: column;
 }
 
-#livelayout div::before {
-	content: '';
-	display: block;
-	height: 0;
-	width: 0;
-	padding-bottom: calc(9 / 16 * 100%);
-}
-
-#chat h2 {
+#livelayout div#chat h2 {
 	/* background-color: var(--green-color); */
 	border: none;
+	background-color: white;
+  
 }
 
 
@@ -360,7 +355,7 @@ section:not(#offline) {
 	min-height: 900px;
 }
 
-section h2, #livelayout h2 {
+section h2, #livelayout h2:first-of-type {
 	text-align: center;
 	font-weight: 400;
 	text-transform: uppercase;
