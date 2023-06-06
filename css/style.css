@@ -81,7 +81,7 @@ body {
 }
 
 .purple-gradient {
-	background-image: linear-gradient(0deg, var(--purple-color), #fff0);!important
+	background-image: linear-gradient(0deg, var(--purple-color), #fff0) !important;
 }
 
 a {
@@ -286,7 +286,7 @@ span.phraseToggle p {
 
 	width: auto;
 	min-height: 350px;
-	height: 100%
+	height: 100%;
 	overflow-y: scroll;
 }
 
@@ -309,13 +309,13 @@ span.phraseToggle p {
 
 #livelayout div#chat {
     display: flex;
- 
+     justify-content: space-between;
     flex-direction: column;
     height: 99%;
 }
 
 #livelayout div#chat h2 {
-	/* background-color: var(--green-color); */
+	margin-top: 0;
 	border: none;
 	background-color: white;
   
@@ -363,7 +363,7 @@ section h2, #livelayout h2:first-of-type {
 	font-weight: 400;
 	text-transform: uppercase;
 	/* border: 1px solid var(--text-color); */
-	width: 30%;
+	width: 10%;
 	min-width: 200px;
 	font-family: var(--narrow-text);
 	padding: 0.25em 0 0 0;
