@@ -64,7 +64,7 @@ body {
 
 #tlkio {
 	margin-bottom: 8em;
-	width: 960px;
+	width: auto;
 	height: 350px;
 	overflow-y: scroll;
 }
@@ -326,9 +326,9 @@ span.phraseToggle p {
 	border: none;
 }
 
-section#live {}
 
-#live h2 {
+
+#livelayout h2 {
 	background-color: var(--purple-color);
 	border: 1px solid var(--text-color);
 }
