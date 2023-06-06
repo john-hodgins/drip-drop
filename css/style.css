@@ -608,17 +608,17 @@ main.catelogue a+a {
 	}
 
 	#livelayout {
-		display: grid;
-		grid-template-rows: auto 40%;
+		display: block;
+	
 	}
 
-	#chat {
-		max-height: 40%;
-	}
-
-	#chat h2 {
+#livelayout div#chat {
+	display: block;
+}
+	#livelayout div#chat h2 {
 		background-color: var(--green-color);
 		border: 1px solid var(--text-color);
+		margin-top: 0.5em;
 	}
 
 	/* MOBILE portrait */
@@ -627,7 +627,7 @@ main.catelogue a+a {
 		#tlkio {
 			margin: 2em 0.5em 4em 0.5em;
 			width: inherit;
-			height: 350px;
+			height: 300px;
 		}
 
 		section#offline {
