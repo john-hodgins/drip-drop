@@ -11,8 +11,12 @@ function addPlayer(data, id) {
 				document.getElementById('footerTitle').classList.add('hidden');
 				document.getElementById('footerTitleLive').classList.remove('hidden');
 				document.getElementById('footerStream').classList.add('green-color');
-				document.getElementByClass('gradient').classList.add('purple-gradient');
-				document.getElementByClass('live-purple').classList.add('purple');
+				Array.from(document.getElementsByClassName('gradient')).forEach(function (element) {
+					element.classList.add('purple-gradient');
+				});
+				Array.from(document.getElementsByClassName('live-purple')).forEach(function (element) {
+					element.classList.add('purple');
+				});
 			} else {
 				mux.setAttribute('stream-type', 'on-demand');
 			}
