@@ -69,31 +69,16 @@
 <!-- 3 DRIPS LOGO, top left corner-->
 	<a class="dripsbtn" href="#" title="&#8618; drip-drop.tv homepage"><img src="assets/drips.png" alt="icon of three drops in reference to drip-drop.tv" width="20px"></a>
 
-<!-- 01 OFFLINE LAYOUT, logo and gif centered -->
-		<section id="offline" class="hide">
-			<span class="phraseToggle">
-				<img
-					class="logo"
-					src="assets/drip-drop logo.png"
-					width="200px"
-					onclick="newPhrase()" title="click for more drip-drop.tv"
-				/>
-			
-				<p id="phrases"></p>
-			</span>
-			<img src="assets/driftR1.gif" title="standing in a drip-drop stream" alt="an animated drawing of a person standing in a stream" />
-		</section>
-
-<!-- 02 LIVE LAYOUT, landscape horizontally stacked -->
+<!-- 01 LIVE LAYOUT, landscape horizontally stacked -->
 <main id="liveLayout">
+
 	<!-- VIDEO PLAYER, left -->
-	<section id="live" class="hidden">
+	<div id="live" class="hidden">
 		<h2>Live</h2>
-		<img src="assets/dripdroptv.png" title="drip-drop.tv" width="80px">
-	</section>
+	</div>
 
 		<!-- CHAT, right -->
-	<section id="chat" class="hidden">
+	<div id="chat" class="hidden">
 		<h2>Chat</h2>
 			<!-- <div
 				id="tlkio"
@@ -109,8 +94,26 @@
 			></div>
 
 		<script async src="https://tlk.io/embed.js" type="text/javascript"></script>
-	</section>
+	</div>
 </main>
+
+
+<!-- 02 OFFLINE LAYOUT, logo and gif centered -->
+		<section id="offline" class="hide">
+			<span class="phraseToggle">
+				<img
+					class="logo"
+					src="assets/drip-drop logo.png"
+					width="200px"
+					onclick="newPhrase()" title="click for more drip-drop.tv"
+				/>
+			
+				<p id="phrases"></p>
+			</span>
+			<img src="assets/driftR1.gif" title="standing in a drip-drop stream" alt="an animated drawing of a person standing in a stream" />
+		</section>
+
+
 
 <!-- 03 SECTION // PAST VIDEOS -->
 	<section id="babybooklaunch" class="past">
