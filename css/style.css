@@ -76,7 +76,7 @@ body {
 	max-width: 960px;
 }
 
-mux-player {
+section mux-player {
 	--pip-button: none;
 	width: 960px;
 }
@@ -308,12 +308,12 @@ span.phraseToggle p {
 	grid-gap: 1em;
 }
 
-#livelayout section {
+#livelayout div {
 	display: flex;
 	justify-content: center;
 }
 
-#livelayout section::before {
+#livelayout div::before {
 	content: '';
 	display: block;
 	height: 0;
@@ -358,12 +358,12 @@ section:not(#offline) {
 	min-height: 900px;
 }
 
-section h2 {
+section h2, div#live h2 {
 	text-align: center;
 	font-weight: 400;
 	text-transform: uppercase;
 	/* border: 1px solid var(--text-color); */
-	width: 10%;
+	width: 30%;
 	min-width: 200px;
 	font-family: var(--narrow-text);
 	padding: 0.25em 0 0 0;
