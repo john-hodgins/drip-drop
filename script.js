@@ -6,6 +6,7 @@ function addPlayer(data, id) {
 			mux = document.createElement('mux-player');
 			if (id == 'live') {
 				mux.setAttribute('stream-type', 'live');
+				document.getElementById('dripdrop').classList.add('live');
 				document.getElementById('chat').classList.remove('hidden');
 				document.getElementById('offline').classList.add('hidden');
 				document.getElementById('footerTitle').classList.add('hidden');
