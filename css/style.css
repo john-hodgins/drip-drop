@@ -613,15 +613,15 @@ main.catelogue a + a {
 		display: block;
 		margin-top: 5em;
 	}
-}
 
-#livelayout div#chat {
-	display: block;
-}
-#livelayout div#chat h2 {
-	background-color: var(--green-color);
-	border: 1px solid var(--text-color);
-	margin-top: 0.5em;
+	#livelayout div#chat {
+		display: block;
+	}
+	#livelayout div#chat h2 {
+		background-color: var(--green-color);
+		border: 1px solid var(--text-color);
+		margin-top: 0.5em;
+	}
 }
 
 /* MOBILE portrait */
