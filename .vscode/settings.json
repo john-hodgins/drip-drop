@@ -1,8 +1,4 @@
 {
   "editor.formatOnSave": true,
   "editor.tabSize": 2,
-  "livePreview.hostIP": "192.168.1.21",
-  "livePreview.httpHeaders": {
-    "Accept-Ranges": "bytes"
-  }
 }

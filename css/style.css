@@ -352,7 +352,7 @@ section mux-player {
 }
 
 section:not(#offline) {
-	min-height: 900px;
+	height: 900px;
 }
 
 section h2,

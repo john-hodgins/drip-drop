@@ -1,4 +1,4 @@
-@import 'css/fonts.css';
+@import 'fonts.css';
 
 @font-face {
 	font-family: 'Authentic-Sans-90-reg';
@@ -112,6 +112,7 @@ div.post-avatar.post-avatar--troll {
 	color: var(--green-color);
 	text-transform: uppercase;
 }
+
 textarea#message_body.message-input {
 	border: 1px dashed var(--text-color);
 	border-radius: 0px;
@@ -124,6 +125,7 @@ textarea#message_body.message-input {
 aside.aside div.info {
 	display: none;
 }
+
 aside.aside div.participants {
 	border-radius: 0px;
 	border: 1px solid var(--green-color);
