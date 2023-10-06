@@ -4,17 +4,8 @@ title: drip-drop.tv
 ---
 
 <body id="dripdrop">
-	{% include infobutton.html %}
-	<!-- PAST BUTTON, top right -->
-	<div class="infobutton">
-		<a href="catalogue.html" title="&#8618; index of past streams">
-			Past
-		</a>
-	</div>
 
-	<!-- 3 DRIPS LOGO, top left corner-->
-	<a class="dripsbtn" href="#" title="&#8618; drip-drop.tv homepage"><img src="assets/drips.png"
-			alt="icon of three drops in reference to drip-drop.tv" width="20px"></a>
+	{% include header.html link="catalogue.html" %}
 
 	<!-- 01 LIVE LAYOUT, landscape horizontally stacked -->
 	<main id="livelayout" class="hidden">
@@ -44,122 +35,49 @@ title: drip-drop.tv
 	</section>
 
 	<!-- 03 SECTION // PAST VIDEOS -->
-	<section id="thonkpiece" class="past">
-		<h2>Thonk Piece live from Cosima von Bonin’s Church of Daffy</h2>
-		<mux-player stream-type="on-demand" playback-id="msLi00cT3WKugqkHkOYuGXBZ01etcfazfA4eeTt3K2krs"
-			metadata-video-title="Placeholder (optional)" metadata-viewer-user-id="drip-drop.tv" primary-color="#FFFFFF"
-			secondary-color="#292929"></mux-player>
-		<div class="video-credits">
-			<h5>Program</h5>
-			<p>Proddy Produzentin &#8230; Mary Messhausen &#8230; Lex Vaughn &#8230; Macy Rodman</p>
-			<h5>Production</h5>
-			<p>Livestream by Oliver Husain &#8230; Camera byDanny Polonsky</p>
-			<h5>thank you</h5>
-			<p> Petzel Gallery &#8230; Seth Kelly &#8230; Rodrigo Parodi &#8230; Robin Simpson</p>
-		</div>
-	</section>
-
-	<section id="babybooklaunch" class="past">
-		<h2>Baby Book Launch</h2>
-		<mux-player stream-type="on-demand" playback-id="ZF02yEtSahhY8jEsezfiWaJVL01lTPy0102O9tfLYrLW6F8"
-			metadata-video-title="Baby Book Launch" metadata-viewer-user-id="drip-drop.tv" primary-color="#FFFFFF"
-			secondary-color="#292929">
-		</mux-player>
-		<div class="video-credits">
-			<h5>Program</h5>
-			<p>Music by New Chance &#8230; A reading by Mei-mei Berssenbrugge &#8230; Video by Marvin Luvualu António &#8230;
-				A conversation with Fan Wu</p>
-			<h5>Production</h5>
-			<p>Floral arrangements by Gunnar Floral &#8230; Livestream by Oliver Husain &#8230; Sound design by Matt Smith
-				&#8230; Cameras by Monica Moraru and Khanh Tudo &#8230; Produced by Robin Simpson</p>
-			<h5>thank you</h5>
-			<p> Annie Wong &#8230; Gallery TPW &#8230; Rinaldo Walcott &#8230; Another Story Bookshop &#8230; Brick Books</p>
-		</div>
-	</section>
-
-	<section id="cookiemonster" class="past">
-		<h2>C**kie M*nster *nterpreter</h2>
-		<mux-player stream-type="on-demand" playback-id="gbfsBhqZH9fBnBPpOEKejnGuqojgBca7Xt02loqWxhIQ"
-			metadata-video-title="Streamy Windows" metadata-viewer-user-id="drip-drop.tv" primary-color="#FFFFFF"
-			secondary-color="#292929">
-		</mux-player>
-		<div class="video-credits">
-			<h5>Performance</h5>
-			<p>Amy Lam &#8230; Aliya Pabani as Cookie Monster</p>
-			<h5>Production</h5>
-			<p>Livestream by Oliver Husain &#8230; Music/sound design by Matt Smith &#8230; Production assistance by Monica
-				Moraru</p>
-			<h5>thank you</h5>
-			<p>Erin Stump &#8230; Peg &#8230; Buzz &#8230; Canada Council for the Arts &#8230; Toronto Arts Council &#8230;
-				The 11th Seoul MediaCity Biennale</p>
-		</div>
-	</section>
-
-	<section id="streamywindows" class="past">
-		<h2>Streamy Windows</h2>
-		<mux-player stream-type="on-demand" playback-id="m8FS1TMBSd8FZRF601bnGtmnzm2znWby38rYnJBBiDlI"
-			metadata-video-title="C**kie M*nster *nterpreter" metadata-viewer-user-id="drip-drop.tv" primary-color="#FFFFFF"
-			secondary-color="#292929">
-		</mux-player>
-		<div class="video-credits">
-			<h5>Performance</h5>
-			<p>Megumi Kokuba &#8230; Charlton Diaz &#8230; Anni Spadafora</p>
-			<h5>Curator</h5>
-			<p>Yan Wu</p>
-			<h5>Production</h5>
-			<p>Livestream by Oliver Husain &#8230;Visuals by Iris Ng and Serena Lee &#8230; Costumes Vanessa Magic &#8230;
-				Music by Matt Smith &#8230; Produced by Art Museum of UofT for Immaterial Architecture</p>
-			<h5>thank you</h5>
-			<p> Hiroshi Yoshida &#8230; Barbara Fischer &#8230; Toronto Dance Theatre</p>
-		</div>
-	</section>
+	{% for event in site.events reversed %}
+		{% if event.date > site.time %}
+			{% continue %}
+		{% endif %}
+  	<section id="{{ event.path | remove: "." | slice: 8,10 }}" class="past">
+			<h2>{{ event.title }}</h2>
+			{{ event.content }}
+		</section>
+  {% endfor %}
 
 	<!-- FOOTER // PAST STREAM LIST -->
 	<div title="&#8618; click to show content" class="gradient" onclick="displayContent()" ;></div>
 
 	<!-- remove class="ignore" to show footer -->
-	<footer class="" title="&#8618; click to hide content" id="past-list" onclick="displayContent()" ;>
+	{% assign ignore = "ignore" %}
+	{% for event in site.events %}
+		{% if event.date > site.time %}
+			{% assign ignore = "" %}
+			{% break %}
+		{% endif %}
+	{% endfor %}
+	<footer class="{{ ignore }}" title="&#8618; click to hide content" id="past-list" onclick="displayContent()" ;>
 		<div class="gradient"></div>
 		<div class="live-purple">
 			<h3 id="footerTitle">Next</h3>
 			<h3 id="footerTitleLive" class="hidden">Streaming</h3>
-
 			<span id="footerStream">
-
-				<!-- ** date + time -->
-				<p>Saturday, October 14 2023</br> &#10088;8pm ET&#10089;</p>
-
-				<!-- ** thumbnail image -->
-				<img width="70px" height="70px" src="assets/massey-thumb.png" title="massey-thumb" />
-
-				<!-- ** title -->
-				<p>"The Beauties of Lucknow - live from Massey College"
-				</p>
-
-				<!-- ** artists -->
-				<p>
-					Tanveer Alam, Swapnaa Tamhane, Oliver Husain, New Chance, Jonathan Adjemian, Aaditya Aggarwal, Hisham
-				</p>
-
-				<!-- ** date + time -->
-				<p>Saturday, October 28 2023</br> &#10088;1.30pm EDT&#10089;</p>
-
-				<!-- ** thumbnail image -->
-				<img width="70px" height="70px" src="assets/lisasmolkin_thumb.png" title="lisasmolkin_thumb" />
-
-				<!-- ** title -->
-				<p>"If It’s Not A Hell Yes, It’s A No"
-				</p>
-
-				<!-- ** artists -->
-				<p>
-					Lisa Smolkin
-				</p>
-
+				{% for event in site.events %}
+					{% if event.date < site.time %}
+						{% continue %}
+					{% endif %}
+					<!-- ** date + time -->
+					<p>{{ event.date | date: "%A, %B %e %Y" }}
+					<br>&#10088;{{ event.date | date: "%l:%M%P" }} ET&#10089;</p>
+					<!-- ** thumbnail image -->
+					<img width="70px" height="70px" src="assets/{{ event.thumbnail }}" title="{{ event.title | escape-once }}" />
+					<!-- ** title -->
+					<p>"{{ event.title }}"</p>
+					<!-- ** artists -->
+					<p>{{ event.artists }}</p>
+				{% endfor %}
 			</span>
-
 		</div>
-
 	</footer>
 
 </body>
