@@ -36,14 +36,25 @@ title: drip-drop.tv
 
 	<!-- 03 SECTION // PAST VIDEOS -->
 	{% for event in site.events reversed %}
-		{% if event.date > site.time %}
-			{% continue %}
-		{% endif %}
-  	<section id="{{ event.path | remove: "." | slice: 8,10 }}" class="past">
-			<h2>{{ event.title }}</h2>
-			{{ event.content }}
-		</section>
-  {% endfor %}
+	{% if event.mux-id == nil %}
+	{% continue %}
+	{% endif %}
+	<section id="{{ event.path | remove: " ." | slice: 8,10 }}" class="past">
+		<h2>{{ event.title }}</h2>
+		<mux-player stream-type="on-demand" playback-id="{{ event.mux-id }}"
+			metadata-video-title="{{ event.title | escape_once }}" metadata-viewer-user-id="drip-drop.tv"
+			primary-color="#FFFFFF" secondary-color="#292929">
+		</mux-player>
+		<div class="video-credits">
+			<h5>On screen</h5>
+			<p>{{ event.program | replace: "...", "&#8230;" }}</p>
+			<h5>Production</h5>
+			<p>{{ event.production | replace: "...", "&#8230;" }}</p>
+			<h5>Thank you</h5>
+			<p>{{ event.thanks | replace: "...", "&#8230;" }}</p>
+		</div>
+	</section>
+	{% endfor %}
 
 	<!-- FOOTER // PAST STREAM LIST -->
 	<div title="&#8618; click to show content" class="gradient" onclick="displayContent()" ;></div>
@@ -51,32 +62,30 @@ title: drip-drop.tv
 	<!-- remove class="ignore" to show footer -->
 	{% assign ignore = "ignore" %}
 	{% for event in site.events %}
-		{% if event.date > site.time %}
-			{% assign ignore = "" %}
-			{% break %}
-		{% endif %}
+	{% if event.date > site.time %}
+	{% assign ignore = "" %}
+	{% break %}
+	{% endif %}
 	{% endfor %}
 	<footer class="{{ ignore }}" title="&#8618; click to hide content" id="past-list" onclick="displayContent()" ;>
 		<div class="gradient"></div>
 		<div class="live-purple">
 			<h3 id="footerTitle">Next</h3>
 			<h3 id="footerTitleLive" class="hidden">Streaming</h3>
-			<span id="footerStream">
-				{% for event in site.events %}
-					{% if event.date < site.time %}
-						{% continue %}
-					{% endif %}
-					<!-- ** date + time -->
+			{% for event in site.events %}
+			{% if event.date < site.time %} {% continue %} {% endif %} <!-- ** date + time -->
+				<span>
 					<p>{{ event.date | date: "%A, %B %e %Y" }}
-					<br>&#10088;{{ event.date | date: "%l:%M%P" }} ET&#10089;</p>
+						<br>&#10088;{{ event.date | date: "%l:%M%P" }} ET&#10089;
+					</p>
 					<!-- ** thumbnail image -->
 					<img width="70px" height="70px" src="assets/{{ event.thumbnail }}" title="{{ event.title | escape-once }}" />
 					<!-- ** title -->
 					<p>"{{ event.title }}"</p>
 					<!-- ** artists -->
 					<p>{{ event.artists }}</p>
+				</span>
 				{% endfor %}
-			</span>
 		</div>
 	</footer>
 
