@@ -483,6 +483,8 @@ footer div span {
 
 footer span+span {
 	border-top: 1px dashed var(--grey-color);
+	margin-top: 1em;
+	padding-top: 1em;
 }
 
 footer div+div span:last-of-type {
