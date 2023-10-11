@@ -72,7 +72,7 @@ body {
 	opacity: 0;
 }
 
-.green-color {
+.green-color span {
 	color: var(--darkgreen-color);
 }
 
