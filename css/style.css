@@ -497,6 +497,12 @@ footer span p {
 	margin-top: 1em;
 }
 
+@-moz-document url-prefix() {
+	footer span p:first-of-type {
+		transform: translateY(-10px);
+	}
+}
+
 footer span img {
 	width: 100%;
 	height: max-content;
