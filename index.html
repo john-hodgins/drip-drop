@@ -1,68 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<!-- (c) 2023 | @shabana_asthma | last updated may29-->
+---
+layout: default
+title: drip-drop.tv
+---
 
-<head>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<link rel="stylesheet" type="text/css" href="css/style.css" />
-	<link rel="icon" type="image/png" href="favicon.png" />
+<body id="dripdrop">
 
-	<title>drip-drop.tv</title>
-	<meta name="title" content="Drip-Drop.Tv" />
-	<meta name="description" content="A place to stream" />
+	{% include header.html link="catalogue.html" %}
 
-	<meta property="og:type" content="website" />
-	<meta property="og:url" content="" />
-	<meta property="og:title" content="Drip-Drop.Tv" />
-	<meta property="og:description" content="A place to stream" />
-	<meta property="og:image" content="https://drip-drop.tv/assets/dripdroptv.png" />
-
-	<meta property="twitter:url" content="" />
-	<meta property="twitter:title" content="Drip-Drop.Tv" />
-	<meta property="twitter:description" content="A place to stream" />
-	<meta property="twitter:image" content="https://drip-drop.tv/assets/dripdroptv.png" />
-
-	<script src="https://unpkg.com/@mux/mux-player"></script>
-</head>
-
-<body>
-	<!-- INFO BUTTON, top right -->
-	<div class="infobutton">
-		<p title="&#8618; info" class="right-align" onclick="displayInfo()" ;>
-			?
-		</p>
-
-		<div id="dropdown" class="hide">
-			<p>
-				Drip-drop.tv is a livestream platform, </br>organized by
-				<a href="https://amylam.me/" target="_blank" title="amylam.me">Amy Lam</a> and
-				<a href="http://husain.de/" target="_blank" title="husain.de">Oliver Husain</a>
-			</p>
-			<p>
-				Designed by
-				<a href="https://rupalimo.github.io/" target="_blank" title="rupali.com">Rupali Morzaria</a></br>Developed by <a
-					href="" target="_blank" title="">John Hodgins</a>
-			</p>
-
-			<p>Supported by Canada Council for the Arts</p>
-			<img src="assets/CCA.svg" width="50px" title="Canada Council for the Arts Logo">
-		</div>
-	</div>
-	</div>
-
-	<!-- PAST BUTTON, top right -->
-	<div class="infobutton">
-		<a href="previous/catelogue.htm" title="&#8618; index of past streams">
-			Past
-		</a>
-	</div>
-
-	<!-- 3 DRIPS LOGO, top left corner-->
-	<a class="dripsbtn" href="#" title="&#8618; drip-drop.tv homepage"><img src="assets/drips.png"
-			alt="icon of three drops in reference to drip-drop.tv" width="20px"></a>
-
-<!-- 01 LIVE LAYOUT, landscape horizontally stacked -->
+	<!-- 01 LIVE LAYOUT, landscape horizontally stacked -->
 	<main id="livelayout" class="hidden">
 		<h2>Live</h2>
 		<!-- video -->
@@ -72,15 +17,8 @@
 		<!-- chat -->
 		<div id="chat" class="hidden">
 			<h2>Chat</h2>
-			<!-- <div
-				id="tlkio"
-				data-channel="drip-drop"
-				data-theme="theme--minimal"
-				data-custom-css="http://localhost:8000/dripdrop/css/chat-styles.css"
-			></div> -->
 			<div id="tlkio" data-channel="drip-drop" data-theme="theme--minimal"
 				data-custom-css="https://drip-drop.tv/css/chat-styles.css"></div>
-
 			<script async src="https://tlk.io/embed.js" type="text/javascript"></script>
 		</div>
 	</main>
@@ -90,133 +28,65 @@
 		<span class="phraseToggle">
 			<img class="logo" src="assets/drip-drop logo.png" width="200px" onclick="newPhrase()"
 				title="click for more drip-drop.tv" />
-
 			<p id="phrases"></p>
 		</span>
 		<img src="assets/driftR1.gif" title="standing in a drip-drop stream"
 			alt="an animated drawing of a person standing in a stream" />
 	</section>
 
-	
-<!-- 03 SECTION // PAST VIDEOS -->
-
-	<section id="thonkpiece" class="past">
-		
-		<h2>Thonk Piece live from Cosima von Bonin’s Church of Daffy</h2>
-		<mux-player
-  	stream-type="on-demand"
-  	playback-id="msLi00cT3WKugqkHkOYuGXBZ01etcfazfA4eeTt3K2krs"
-  	metadata-video-title="Placeholder (optional)"
-  	metadata-viewer-user-id="drip-drop.tv"
-  	primary-color="#FFFFFF"
-  	secondary-color="#292929"
-		></mux-player>
-		<div class="video-credits">
-			<h5>Program</h5>
-			<p>Proddy Produzentin &#8230; Mary Messhausen &#8230; Lex Vaughn &#8230; Macy Rodman</p>
-			<h5>Production</h5>
-			<p>Livestream by Oliver Husain &#8230; Camera byDanny Polonsky</p>
-			<h5>thank you</h5>
-			<p> Petzel Gallery &#8230; Seth Kelly &#8230; Rodrigo Parodi &#8230; Robin Simpson</p>
-		</div>
-	</section>
-
-
-	<section id="babybooklaunch" class="past">
-
-		<h2>Baby Book Launch</h2>
-		<mux-player stream-type="on-demand" playback-id="ZF02yEtSahhY8jEsezfiWaJVL01lTPy0102O9tfLYrLW6F8"
-			metadata-video-title="Baby Book Launch" metadata-viewer-user-id="drip-drop.tv" primary-color="#FFFFFF"
-			secondary-color="#292929">
+	<!-- 03 SECTION // PAST VIDEOS -->
+	{% for event in site.events reversed %}
+	{% if event.mux-id == nil %}
+	{% continue %}
+	{% endif %}
+	<section id="{{ event.path | remove: " ." | slice: 8,10 }}" class="past">
+		<h2>{{ event.title }}</h2>
+		<mux-player stream-type="on-demand" playback-id="{{ event.mux-id }}"
+			metadata-video-title="{{ event.title | escape_once }}" metadata-viewer-user-id="drip-drop.tv"
+			primary-color="#FFFFFF" secondary-color="#292929">
 		</mux-player>
 		<div class="video-credits">
-			<h5>Program</h5>
-			<p>Music by New Chance &#8230; A reading by Mei-mei Berssenbrugge &#8230; Video by Marvin Luvualu António &#8230;
-				A conversation with Fan Wu</p>
+			<h5>On screen</h5>
+			<p>{{ event.program | replace: "...", "&#8230;" }}</p>
 			<h5>Production</h5>
-			<p>Floral arrangements by Gunnar Floral &#8230; Livestream by Oliver Husain &#8230; Sound design by Matt Smith
-				&#8230; Cameras by Monica Moraru and Khanh Tudo &#8230; Produced by Robin Simpson</p>
-			<h5>thank you</h5>
-			<p> Annie Wong &#8230; Gallery TPW &#8230; Rinaldo Walcott &#8230; Another Story Bookshop &#8230; Brick Books</p>
+			<p>{{ event.production | replace: "...", "&#8230;" }}</p>
+			<h5>Thank you</h5>
+			<p>{{ event.thanks | replace: "...", "&#8230;" }}</p>
 		</div>
 	</section>
-
-	<section id="cookiemonster" class="past">
-
-		<h2>C**kie M*nster *nterpreter</h2>
-		<mux-player stream-type="on-demand" playback-id="gbfsBhqZH9fBnBPpOEKejnGuqojgBca7Xt02loqWxhIQ"
-			metadata-video-title="Streamy Windows" metadata-viewer-user-id="drip-drop.tv" primary-color="#FFFFFF"
-			secondary-color="#292929">
-		</mux-player>
-		<div class="video-credits">
-			<h5>Performance</h5>
-			<p>Amy Lam &#8230; Aliya Pabani as Cookie Monster</p>
-			<h5>Production</h5>
-			<p>Livestream by Oliver Husain &#8230; Music/sound design by Matt Smith &#8230; Production assistance by Monica
-				Moraru</p>
-			<h5>thank you</h5>
-			<p>Erin Stump &#8230; Peg &#8230; Buzz &#8230; Canada Council for the Arts &#8230; Toronto Arts Council &#8230;
-				The 11th Seoul MediaCity Biennale</p>
-		</div>
-	</section>
-
-	<section id="streamywindows" class="past">
-
-		<h2>Streamy Windows</h2>
-		<mux-player stream-type="on-demand" playback-id="m8FS1TMBSd8FZRF601bnGtmnzm2znWby38rYnJBBiDlI"
-			metadata-video-title="C**kie M*nster *nterpreter" metadata-viewer-user-id="drip-drop.tv" primary-color="#FFFFFF"
-			secondary-color="#292929">
-		</mux-player>
-		<div class="video-credits">
-			<h5>Performance</h5>
-			<p>Megumi Kokuba &#8230; Charlton Diaz &#8230; Anni Spadafora</p>
-			<h5>Curator</h5>
-			<p>Yan Wu</p>
-			<h5>Production</h5>
-			<p>Livestream by Oliver Husain &#8230;Visuals by Iris Ng and Serena Lee &#8230; Costumes Vanessa Magic &#8230;
-				Music by Matt Smith &#8230; Produced by Art Museum of UofT for Immaterial Architecture</p>
-
-			<h5>thank you</h5>
-			<p> Hiroshi Yoshida &#8230; Barbara Fischer &#8230; Toronto Dance Theatre</p>
-		</div>
-	</section>
-
+	{% endfor %}
 
 	<!-- FOOTER // PAST STREAM LIST -->
 	<div title="&#8618; click to show content" class="gradient" onclick="displayContent()" ;></div>
 
 	<!-- remove class="ignore" to show footer -->
-	<footer class="ignore" title="&#8618; click to hide content" id="past-list" onclick="displayContent()" ;>
+	{% assign ignore = "ignore" %}
+	{% for event in site.events %}
+	{% if event.date > site.time %}
+	{% assign ignore = "" %}
+	{% break %}
+	{% endif %}
+	{% endfor %}
+	<footer class="{{ ignore }}" title="&#8618; click to hide content" id="past-list" onclick="displayContent()" ;>
 		<div class="gradient"></div>
 		<div class="live-purple">
 			<h3 id="footerTitle">Next</h3>
 			<h3 id="footerTitleLive" class="hidden">Streaming</h3>
-			
-		
-			<span id="footerStream">
-
-				<!-- ** date + time -->
-				<p>Thursday, June 8 2023</br> &#10088;6-8pm ET&#10089;</p>
-
-				<!-- ** thumbnail image -->
-				<img width="70px" height="70px" src="assets/daffythonk.png" title="daffythonk" />
-
-				<!-- ** title -->
-				<p>"Thonk Piece - Live from Cosima von Bonin’s Church of Daffy"
-				</p>
-
-				<!-- ** artists -->
-				<p>
-					Mary Messhausen, Proddy Produzentin, Macy Rodman, Lex Vaughn, Oliver Husain
-				</p>
-			</span>
-
+			{% for event in site.events %}
+			{% if event.date < site.time %} {% continue %} {% endif %} <!-- ** date + time -->
+				<span>
+					<p>{{ event.date | date: "%A, %B %e %Y" }}
+						<br>&#10088;{{ event.date | date: "%l:%M%P" }} ET&#10089;
+					</p>
+					<!-- ** thumbnail image -->
+					<img width="70px" height="70px" src="assets/{{ event.thumbnail }}" title="{{ event.title | escape-once }}" />
+					<!-- ** title -->
+					<p>"{{ event.title }}"</p>
+					<!-- ** artists -->
+					<p>{{ event.artists }}</p>
+				</span>
+				{% endfor %}
 		</div>
-
 	</footer>
 
 </body>
-
-<script src="script.js"></script>
-
-</html>

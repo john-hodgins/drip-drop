@@ -6,12 +6,13 @@ function addPlayer(data, id) {
 			mux = document.createElement('mux-player');
 			if (id == 'live') {
 				mux.setAttribute('stream-type', 'live');
+				document.getElementById('dripdrop').classList.add('live');
 				document.getElementById('chat').classList.remove('hidden');
 				document.getElementById('livelayout').classList.remove('hidden');
 				document.getElementById('offline').classList.add('hidden');
 				document.getElementById('footerTitle').classList.add('hidden');
 				document.getElementById('footerTitleLive').classList.remove('hidden');
-				document.getElementById('footerStream').classList.add('green-color');
+				//				document.getElementById('footerStream').classList.add('green-color');
 				Array.from(document.getElementsByClassName('gradient')).forEach(
 					function (element) {
 						element.classList.add('purple-gradient');
@@ -20,6 +21,7 @@ function addPlayer(data, id) {
 				Array.from(document.getElementsByClassName('live-purple')).forEach(
 					function (element) {
 						element.classList.add('purple');
+						element.classList.add('green-color');
 					}
 				);
 			} else {
