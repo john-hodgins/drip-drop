@@ -81,9 +81,11 @@ body {
 }
 
 .purple-gradient {
-	background-image: linear-gradient(0deg,
-			var(--purple-color),
-			#fff0) !important;
+	background-image: linear-gradient(
+		0deg,
+		var(--purple-color),
+		#fff0
+	) !important;
 }
 
 a {
@@ -164,7 +166,7 @@ pre {
 	display: none;
 }
 
-.infobutton p+div>p {
+.infobutton p + div > p {
 	font-family: var(--serif-text);
 	font-size: 0.95em;
 	margin: 1em 0;
@@ -172,15 +174,15 @@ pre {
 	cursor: pointer;
 }
 
-.infobutton p+div>p a {
+.infobutton p + div > p a {
 	text-decoration: underline;
 }
 
-.infobutton p+div>p a:hover {
+.infobutton p + div > p a:hover {
 	color: var(--text-secondary);
 }
 
-.infobutton p+div>p a:active {
+.infobutton p + div > p a:active {
 	cursor: grabbing;
 	cursor: -moz-grabbing;
 	cursor: -webkit-grabbing;
@@ -201,8 +203,10 @@ a.dripsbtn img {
 
 a.dripsbtn img:hover,
 #offline span img:hover {
-	-webkit-filter: drop-shadow(4px 4px 4px var(--grey-color)) drop-shadow(-4px -4px 4px var(--grey-color));
-	filter: drop-shadow(4px 4px 4px var(--grey-color)) drop-shadow(-4px -4px 4px var(--grey-color));
+	-webkit-filter: drop-shadow(4px 4px 4px var(--grey-color))
+		drop-shadow(-4px -4px 4px var(--grey-color));
+	filter: drop-shadow(4px 4px 4px var(--grey-color))
+		drop-shadow(-4px -4px 4px var(--grey-color));
 	transition: linear 0.15s;
 }
 
@@ -212,7 +216,7 @@ a.dripsbtn img:hover::after {
 
 /* PREVIOUS BUTTON */
 
-div.infobutton+div.infobutton {
+div.infobutton + div.infobutton {
 	background-color: var(--lightblue-color);
 	margin-top: 4.75em;
 	writing-mode: vertical-rl;
@@ -223,7 +227,7 @@ div.infobutton+div.infobutton {
 	z-index: 2;
 }
 
-div.infobutton+div.infobutton:hover {
+div.infobutton + div.infobutton:hover {
 	transition: linear 0.15s;
 	box-shadow: rgb(18, 160, 255) 0px 3px 15px,
 		rgba(53, 174, 255, 0.838) -1px -1px 12px;
@@ -311,7 +315,9 @@ span.phraseToggle p {
 	display: flex;
 	justify-content: space-between;
 	flex-direction: column;
-	height: 99%;
+	height: 100%;
+	width: 100%;
+	padding: 0 4rem 0 1rem;
 }
 
 #livelayout div#chat h2 {
@@ -400,7 +406,7 @@ section h2,
 }
 
 /* FOOTER // NEXT */
-section+div.gradient {
+section + div.gradient {
 	background-image: linear-gradient(0deg, var(--darkgreen-color), #fff0);
 	width: 100vw;
 	height: 2em;
@@ -430,7 +436,7 @@ footer {
 	bottom: 0;
 }
 
-footer div+div {
+footer div + div {
 	height: 100%;
 	min-height: 120px;
 	width: 100vw;
@@ -481,13 +487,13 @@ footer div span {
 	font-size: 1.25em;
 }
 
-footer span+span {
+footer span + span {
 	border-top: 1px dashed var(--grey-color);
 	margin-top: 1em;
 	padding-top: 1em;
 }
 
-footer div+div span:last-of-type {
+footer div + div span:last-of-type {
 	margin-bottom: 2em;
 }
 
@@ -604,7 +610,7 @@ main.catelogue a h2:nth-of-type(4) {
 	margin-top: 0;
 }
 
-main.catelogue a+a {
+main.catelogue a + a {
 	border-top: 1px dashed var(--text-color);
 }
 
@@ -630,8 +636,7 @@ main.catelogue a+a {
 }
 
 /* MOBILE portrait */
-@media only screen and (orientation: portrait),
-screen and (max-width: 640px) {
+@media only screen and (orientation: portrait), screen and (max-width: 640px) {
 	#tlkio {
 		margin: 2em 0.5em 4em 0.5em;
 		width: inherit;
@@ -647,7 +652,7 @@ screen and (max-width: 640px) {
 		display: none;
 	}
 
-	#offline span+img {
+	#offline span + img {
 		width: 100%;
 	}
 
@@ -659,7 +664,7 @@ screen and (max-width: 640px) {
 		height: 1em;
 	}
 
-	div.infobutton+div.infobutton {
+	div.infobutton + div.infobutton {
 		margin: 1em 4em 0 0;
 		writing-mode: inherit;
 		text-orientation: initial;
@@ -699,7 +704,7 @@ screen and (max-width: 640px) {
 		display: none;
 	}
 
-	#live h2+img {
+	#live h2 + img {
 		display: none;
 	}
 
@@ -731,7 +736,8 @@ screen and (max-width: 640px) {
 	}
 
 	main.catelogue a h2:nth-child(4),
-	main.catelogue a h2:nth-child(5) {}
+	main.catelogue a h2:nth-child(5) {
+	}
 
 	main.catelogue a h2:nth-child(3) {
 		grid-row: 1;
@@ -749,9 +755,8 @@ screen and (max-width: 640px) {
 
 /* MOBILE LANDSCAPE*/
 @media only screen and (max-height: 400px) and (orientation: landscape) {
-
 	div.infobutton,
-	div.infobutton+div.infobutton {
+	div.infobutton + div.infobutton {
 		display: none;
 	}
 
@@ -759,7 +764,7 @@ screen and (max-width: 640px) {
 		min-height: 100vh;
 	}
 
-	section#offline span+img {
+	section#offline span + img {
 		display: none;
 	}
 
