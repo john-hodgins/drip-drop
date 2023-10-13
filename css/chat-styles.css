@@ -199,6 +199,7 @@ button#fb-button svg {
 	display: none;
 }
 
+
 @media (min-width: 500px) .chat {
 	width: auto;
 	margin: 0 3em 0 1em;
