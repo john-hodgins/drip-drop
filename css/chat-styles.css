@@ -199,10 +199,6 @@ button#fb-button svg {
 	display: none;
 }
 
-#chat iframe .footer .footer-wrapper {
-	margin: 1rem 1rem 0.5rem 2rem;
-	padding: 0;
-}
 
 @media (min-width: 500px) .chat {
 	width: auto;
